@@ -1,0 +1,642 @@
+﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
+consumer_electronics,headphones,organizer,desk setup,,headphones organizer desk setup,product_intent_scenario,member_1
+consumer_electronics,airpods,carrying case,how to use,,airpods carrying case how to use,product_intent_scenario,member_1
+consumer_electronics,macbook,carrying case,unboxing,,macbook carrying case unboxing,product_intent_scenario,member_1
+consumer_electronics,airpods,travel case,travel,,airpods travel case travel,product_intent_scenario,member_1
+consumer_electronics,macbook,hard case,desk setup,,macbook hard case desk setup,product_intent_scenario,member_1
+consumer_electronics,airpods,carrying case,daily use,,airpods carrying case daily use,product_intent_scenario,member_1
+consumer_electronics,ipad,protective case,daily use,,ipad protective case daily use,product_intent_scenario,member_1
+consumer_electronics,tablet,holder,EDC,,tablet holder EDC,product_intent_scenario,member_1
+consumer_electronics,ipad,carrying case,setup,,ipad carrying case setup,product_intent_scenario,member_1
+consumer_electronics,tablet,protective case,how to use,,tablet protective case how to use,product_intent_scenario,member_1
+consumer_electronics,airpods,case,travel,,airpods case travel,product_intent_scenario,member_1
+consumer_electronics,earbuds,protective case,daily use,,earbuds protective case daily use,product_intent_scenario,member_1
+consumer_electronics,tablet,holder,review,,tablet holder review,product_intent_scenario,member_1
+consumer_electronics,airpods,carrying case,how to store,,airpods carrying case how to store,product_intent_scenario,member_1
+consumer_electronics,ipad,case,setup,,ipad case setup,product_intent_scenario,member_1
+consumer_electronics,headphones,hard case,how to store,,headphones hard case how to store,product_intent_scenario,member_1
+consumer_electronics,macbook,organizer,how to carry,,macbook organizer how to carry,product_intent_scenario,member_1
+consumer_electronics,earbuds,hard case,unboxing,,earbuds hard case unboxing,product_intent_scenario,member_1
+consumer_electronics,macbook,carrying case,travel,,macbook carrying case travel,product_intent_scenario,member_1
+consumer_electronics,airpods,holder,how to store,,airpods holder how to store,product_intent_scenario,member_1
+consumer_electronics,tablet,hard case,how to use,,tablet hard case how to use,product_intent_scenario,member_1
+consumer_electronics,headphones,case,how to store,,headphones case how to store,product_intent_scenario,member_1
+consumer_electronics,ipad,protective case,EDC,,ipad protective case EDC,product_intent_scenario,member_1
+consumer_electronics,earbuds,carrying case,daily use,,earbuds carrying case daily use,product_intent_scenario,member_1
+consumer_electronics,macbook,protective case,desk setup,,macbook protective case desk setup,product_intent_scenario,member_1
+consumer_electronics,airpods,case,setup,,airpods case setup,product_intent_scenario,member_1
+consumer_electronics,headphones,case,review,,headphones case review,product_intent_scenario,member_1
+consumer_electronics,ipad,travel case,daily use,,ipad travel case daily use,product_intent_scenario,member_1
+consumer_electronics,airpods,hard case,review,,airpods hard case review,product_intent_scenario,member_1
+consumer_electronics,ipad,organizer,unboxing,,ipad organizer unboxing,product_intent_scenario,member_1
+consumer_electronics,tablet,hard case,unboxing,,tablet hard case unboxing,product_intent_scenario,member_1
+consumer_electronics,earbuds,travel case,travel,,earbuds travel case travel,product_intent_scenario,member_1
+consumer_electronics,headphones,box,how to store,,headphones box how to store,product_intent_scenario,member_1
+consumer_electronics,macbook,hard case,how to carry,,macbook hard case how to carry,product_intent_scenario,member_1
+consumer_electronics,ipad,carrying case,desk setup,,ipad carrying case desk setup,product_intent_scenario,member_1
+consumer_electronics,macbook,carrying case,how to carry,,macbook carrying case how to carry,product_intent_scenario,member_1
+consumer_electronics,tablet,holder,how to carry,,tablet holder how to carry,product_intent_scenario,member_1
+consumer_electronics,airpods,carrying case,setup,,airpods carrying case setup,product_intent_scenario,member_1
+consumer_electronics,headphones,hard case,travel,,headphones hard case travel,product_intent_scenario,member_1
+consumer_electronics,headphones,travel case,EDC,,headphones travel case EDC,product_intent_scenario,member_1
+consumer_electronics,ipad,holder,unboxing,,ipad holder unboxing,product_intent_scenario,member_1
+consumer_electronics,macbook,storage,EDC,,macbook storage EDC,product_intent_scenario,member_1
+consumer_electronics,earbuds,holder,review,,earbuds holder review,product_intent_scenario,member_1
+consumer_electronics,macbook,case,daily use,,macbook case daily use,product_intent_scenario,member_1
+consumer_electronics,earbuds,travel case,how to use,,earbuds travel case how to use,product_intent_scenario,member_1
+consumer_electronics,airpods,carrying case,desk setup,,airpods carrying case desk setup,product_intent_scenario,member_1
+consumer_electronics,tablet,case,setup,,tablet case setup,product_intent_scenario,member_1
+consumer_electronics,tablet,storage,travel,,tablet storage travel,product_intent_scenario,member_1
+consumer_electronics,macbook,travel case,how to use,,macbook travel case how to use,product_intent_scenario,member_1
+consumer_electronics,airpods,storage,review,,airpods storage review,product_intent_scenario,member_1
+consumer_electronics,headphones,holder,how to store,,headphones holder how to store,product_intent_scenario,member_1
+consumer_electronics,macbook,box,unboxing,,macbook box unboxing,product_intent_scenario,member_1
+consumer_electronics,macbook,organizer,daily use,,macbook organizer daily use,product_intent_scenario,member_1
+consumer_electronics,airpods,case,desk setup,,airpods case desk setup,product_intent_scenario,member_1
+consumer_electronics,macbook,carrying case,EDC,,macbook carrying case EDC,product_intent_scenario,member_1
+consumer_electronics,ipad,holder,how to store,,ipad holder how to store,product_intent_scenario,member_1
+consumer_electronics,earbuds,hard case,how to carry,,earbuds hard case how to carry,product_intent_scenario,member_1
+consumer_electronics,tablet,travel case,travel,,tablet travel case travel,product_intent_scenario,member_1
+consumer_electronics,tablet,hard case,review,,tablet hard case review,product_intent_scenario,member_1
+consumer_electronics,earbuds,box,EDC,,earbuds box EDC,product_intent_scenario,member_1
+consumer_electronics,headphones,hard case,,,headphones hard case,product_intent,member_1
+consumer_electronics,macbook,organizer,,,macbook organizer,product_intent,member_1
+consumer_electronics,macbook,storage,,,macbook storage,product_intent,member_1
+consumer_electronics,earbuds,storage,,,earbuds storage,product_intent,member_1
+consumer_electronics,tablet,travel case,,,tablet travel case,product_intent,member_1
+consumer_electronics,airpods,holder,,,airpods holder,product_intent,member_1
+consumer_electronics,earbuds,travel case,,,earbuds travel case,product_intent,member_1
+consumer_electronics,macbook,carrying case,,,macbook carrying case,product_intent,member_1
+consumer_electronics,airpods,storage,,,airpods storage,product_intent,member_1
+consumer_electronics,ipad,holder,,,ipad holder,product_intent,member_1
+consumer_electronics,earbuds,organizer,,,earbuds organizer,product_intent,member_1
+consumer_electronics,airpods,travel case,,,airpods travel case,product_intent,member_1
+consumer_electronics,headphones,travel case,,,headphones travel case,product_intent,member_1
+consumer_electronics,airpods,box,,,airpods box,product_intent,member_1
+consumer_electronics,ipad,carrying case,,,ipad carrying case,product_intent,member_1
+consumer_electronics,airpods,organizer,,,airpods organizer,product_intent,member_1
+consumer_electronics,tablet,hard case,,,tablet hard case,product_intent,member_1
+consumer_electronics,headphones,box,,,headphones box,product_intent,member_1
+consumer_electronics,macbook,case,,,macbook case,product_intent,member_1
+consumer_electronics,ipad,box,,,ipad box,product_intent,member_1
+consumer_electronics,macbook,holder,,,macbook holder,product_intent,member_1
+consumer_electronics,earbuds,box,,,earbuds box,product_intent,member_1
+consumer_electronics,earbuds,case,,,earbuds case,product_intent,member_1
+consumer_electronics,earbuds,carrying case,,,earbuds carrying case,product_intent,member_1
+consumer_electronics,ipad,storage,,,ipad storage,product_intent,member_1
+consumer_electronics,tablet,case,,,tablet case,product_intent,member_1
+consumer_electronics,headphones,carrying case,,,headphones carrying case,product_intent,member_1
+consumer_electronics,earbuds,protective case,,,earbuds protective case,product_intent,member_1
+consumer_electronics,airpods,case,,,airpods case,product_intent,member_1
+consumer_electronics,macbook,protective case,,,macbook protective case,product_intent,member_1
+consumer_electronics,headphones,,,how to store {obj},how to store headphones,pain_or_howto,member_1
+consumer_electronics,macbook,,,{obj} scratched easily,macbook scratched easily,pain_or_howto,member_1
+consumer_electronics,macbook,,,safe storage for {obj},safe storage for macbook,pain_or_howto,member_1
+consumer_electronics,earbuds,,,safe storage for {obj},safe storage for earbuds,pain_or_howto,member_1
+consumer_electronics,tablet,,,best hard case for {obj},best hard case for tablet,pain_or_howto,member_1
+consumer_electronics,airpods,,,{obj} easy to break,airpods easy to break,pain_or_howto,member_1
+consumer_electronics,earbuds,,,best hard case for {obj},best hard case for earbuds,pain_or_howto,member_1
+consumer_electronics,macbook,,,no good case for {obj},no good case for macbook,pain_or_howto,member_1
+consumer_electronics,airpods,,,safe storage for {obj},safe storage for airpods,pain_or_howto,member_1
+consumer_electronics,ipad,,,{obj} easy to break,ipad easy to break,pain_or_howto,member_1
+consumer_electronics,earbuds,,,{obj} scratched easily,earbuds scratched easily,pain_or_howto,member_1
+consumer_electronics,airpods,,,best hard case for {obj},best hard case for airpods,pain_or_howto,member_1
+consumer_electronics,headphones,,,best hard case for {obj},best hard case for headphones,pain_or_howto,member_1
+consumer_electronics,airpods,,,{obj} needs a case,airpods needs a case,pain_or_howto,member_1
+consumer_electronics,ipad,,,no good case for {obj},no good case for ipad,pain_or_howto,member_1
+consumer_electronics,airpods,,,{obj} scratched easily,airpods scratched easily,pain_or_howto,member_1
+consumer_electronics,tablet,,,how to store {obj},how to store tablet,pain_or_howto,member_1
+consumer_electronics,headphones,,,{obj} needs a case,headphones needs a case,pain_or_howto,member_1
+consumer_electronics,macbook,,,how to protect {obj},how to protect macbook,pain_or_howto,member_1
+consumer_electronics,ipad,,,{obj} needs a case,ipad needs a case,pain_or_howto,member_1
+consumer_electronics,macbook,,,{obj} easy to break,macbook easy to break,pain_or_howto,member_1
+consumer_electronics,earbuds,,,{obj} needs a case,earbuds needs a case,pain_or_howto,member_1
+consumer_electronics,earbuds,,,how to protect {obj},how to protect earbuds,pain_or_howto,member_1
+consumer_electronics,earbuds,,,no good case for {obj},no good case for earbuds,pain_or_howto,member_1
+consumer_electronics,ipad,,,safe storage for {obj},safe storage for ipad,pain_or_howto,member_1
+consumer_electronics,tablet,,,how to protect {obj},how to protect tablet,pain_or_howto,member_1
+consumer_electronics,headphones,,,no good case for {obj},no good case for headphones,pain_or_howto,member_1
+consumer_electronics,earbuds,,,best way to carry {obj},best way to carry earbuds,pain_or_howto,member_1
+consumer_electronics,airpods,,,how to protect {obj},how to protect airpods,pain_or_howto,member_1
+consumer_electronics,macbook,,,best way to carry {obj},best way to carry macbook,pain_or_howto,member_1
+consumer_electronics,ipad,,,how to protect {obj},how to protect ipad,pain_or_howto,member_1
+consumer_electronics,ipad,,,{obj} scratched easily,ipad scratched easily,pain_or_howto,member_1
+consumer_electronics,tablet,,,{obj} scratched easily,tablet scratched easily,pain_or_howto,member_1
+consumer_electronics,ipad,,,best way to carry {obj},best way to carry ipad,pain_or_howto,member_1
+consumer_electronics,macbook,,,how to store {obj},how to store macbook,pain_or_howto,member_1
+camera_drone,drone battery,organizer,daily use,,drone battery organizer daily use,product_intent_scenario,member_2
+camera_drone,drone battery,travel case,how to carry,,drone battery travel case how to carry,product_intent_scenario,member_2
+camera_drone,camera lens,protective case,daily use,,camera lens protective case daily use,product_intent_scenario,member_2
+camera_drone,camera,storage,review,,camera storage review,product_intent_scenario,member_2
+camera_drone,drone battery,holder,how to store,,drone battery holder how to store,product_intent_scenario,member_2
+camera_drone,camera lens,box,daily use,,camera lens box daily use,product_intent_scenario,member_2
+camera_drone,gopro,holder,how to store,,gopro holder how to store,product_intent_scenario,member_2
+camera_drone,drone battery,travel case,daily use,,drone battery travel case daily use,product_intent_scenario,member_2
+camera_drone,drone,travel case,EDC,,drone travel case EDC,product_intent_scenario,member_2
+camera_drone,gopro,protective case,daily use,,gopro protective case daily use,product_intent_scenario,member_2
+camera_drone,camera lens,organizer,unboxing,,camera lens organizer unboxing,product_intent_scenario,member_2
+camera_drone,drone battery,carrying case,review,,drone battery carrying case review,product_intent_scenario,member_2
+camera_drone,camera,carrying case,review,,camera carrying case review,product_intent_scenario,member_2
+camera_drone,camera lens,holder,review,,camera lens holder review,product_intent_scenario,member_2
+camera_drone,gopro,organizer,travel,,gopro organizer travel,product_intent_scenario,member_2
+camera_drone,camera lens,storage,how to carry,,camera lens storage how to carry,product_intent_scenario,member_2
+camera_drone,drone,holder,unboxing,,drone holder unboxing,product_intent_scenario,member_2
+camera_drone,camera,holder,how to store,,camera holder how to store,product_intent_scenario,member_2
+camera_drone,camera,carrying case,travel,,camera carrying case travel,product_intent_scenario,member_2
+camera_drone,camera,storage,desk setup,,camera storage desk setup,product_intent_scenario,member_2
+camera_drone,camera,carrying case,how to use,,camera carrying case how to use,product_intent_scenario,member_2
+camera_drone,camera,carrying case,EDC,,camera carrying case EDC,product_intent_scenario,member_2
+camera_drone,drone battery,box,how to use,,drone battery box how to use,product_intent_scenario,member_2
+camera_drone,camera,case,desk setup,,camera case desk setup,product_intent_scenario,member_2
+camera_drone,camera lens,protective case,how to use,,camera lens protective case how to use,product_intent_scenario,member_2
+camera_drone,drone battery,box,how to carry,,drone battery box how to carry,product_intent_scenario,member_2
+camera_drone,drone battery,storage,travel,,drone battery storage travel,product_intent_scenario,member_2
+camera_drone,gopro,hard case,travel,,gopro hard case travel,product_intent_scenario,member_2
+camera_drone,camera lens,organizer,daily use,,camera lens organizer daily use,product_intent_scenario,member_2
+camera_drone,drone,storage,review,,drone storage review,product_intent_scenario,member_2
+camera_drone,drone,box,daily use,,drone box daily use,product_intent_scenario,member_2
+camera_drone,gopro,box,how to carry,,gopro box how to carry,product_intent_scenario,member_2
+camera_drone,gopro,box,EDC,,gopro box EDC,product_intent_scenario,member_2
+camera_drone,camera lens,protective case,travel,,camera lens protective case travel,product_intent_scenario,member_2
+camera_drone,camera,carrying case,how to store,,camera carrying case how to store,product_intent_scenario,member_2
+camera_drone,gopro,travel case,how to carry,,gopro travel case how to carry,product_intent_scenario,member_2
+camera_drone,drone battery,storage,how to store,,drone battery storage how to store,product_intent_scenario,member_2
+camera_drone,drone battery,carrying case,daily use,,drone battery carrying case daily use,product_intent_scenario,member_2
+camera_drone,camera,carrying case,daily use,,camera carrying case daily use,product_intent_scenario,member_2
+camera_drone,drone battery,travel case,how to store,,drone battery travel case how to store,product_intent_scenario,member_2
+camera_drone,drone battery,travel case,unboxing,,drone battery travel case unboxing,product_intent_scenario,member_2
+camera_drone,camera lens,box,how to use,,camera lens box how to use,product_intent_scenario,member_2
+camera_drone,camera,carrying case,setup,,camera carrying case setup,product_intent_scenario,member_2
+camera_drone,drone,organizer,how to store,,drone organizer how to store,product_intent_scenario,member_2
+camera_drone,drone battery,storage,desk setup,,drone battery storage desk setup,product_intent_scenario,member_2
+camera_drone,gopro,travel case,how to store,,gopro travel case how to store,product_intent_scenario,member_2
+camera_drone,drone,organizer,setup,,drone organizer setup,product_intent_scenario,member_2
+camera_drone,drone,case,how to store,,drone case how to store,product_intent_scenario,member_2
+camera_drone,drone battery,storage,EDC,,drone battery storage EDC,product_intent_scenario,member_2
+camera_drone,camera,carrying case,desk setup,,camera carrying case desk setup,product_intent_scenario,member_2
+camera_drone,camera,storage,how to use,,camera storage how to use,product_intent_scenario,member_2
+camera_drone,drone,case,review,,drone case review,product_intent_scenario,member_2
+camera_drone,gopro,organizer,review,,gopro organizer review,product_intent_scenario,member_2
+camera_drone,camera,travel case,setup,,camera travel case setup,product_intent_scenario,member_2
+camera_drone,gopro,travel case,travel,,gopro travel case travel,product_intent_scenario,member_2
+camera_drone,camera,hard case,unboxing,,camera hard case unboxing,product_intent_scenario,member_2
+camera_drone,drone battery,storage,how to carry,,drone battery storage how to carry,product_intent_scenario,member_2
+camera_drone,camera,hard case,how to store,,camera hard case how to store,product_intent_scenario,member_2
+camera_drone,camera lens,hard case,unboxing,,camera lens hard case unboxing,product_intent_scenario,member_2
+camera_drone,drone,storage,unboxing,,drone storage unboxing,product_intent_scenario,member_2
+camera_drone,drone battery,storage,,,drone battery storage,product_intent,member_2
+camera_drone,drone,carrying case,,,drone carrying case,product_intent,member_2
+camera_drone,drone,travel case,,,drone travel case,product_intent,member_2
+camera_drone,drone battery,carrying case,,,drone battery carrying case,product_intent,member_2
+camera_drone,gopro,travel case,,,gopro travel case,product_intent,member_2
+camera_drone,drone battery,holder,,,drone battery holder,product_intent,member_2
+camera_drone,camera,organizer,,,camera organizer,product_intent,member_2
+camera_drone,camera lens,storage,,,camera lens storage,product_intent,member_2
+camera_drone,camera,travel case,,,camera travel case,product_intent,member_2
+camera_drone,camera,storage,,,camera storage,product_intent,member_2
+camera_drone,camera,box,,,camera box,product_intent,member_2
+camera_drone,drone,box,,,drone box,product_intent,member_2
+camera_drone,gopro,holder,,,gopro holder,product_intent,member_2
+camera_drone,drone,hard case,,,drone hard case,product_intent,member_2
+camera_drone,camera lens,travel case,,,camera lens travel case,product_intent,member_2
+camera_drone,camera lens,organizer,,,camera lens organizer,product_intent,member_2
+camera_drone,drone battery,box,,,drone battery box,product_intent,member_2
+camera_drone,camera lens,box,,,camera lens box,product_intent,member_2
+camera_drone,camera lens,case,,,camera lens case,product_intent,member_2
+camera_drone,camera lens,carrying case,,,camera lens carrying case,product_intent,member_2
+camera_drone,drone battery,hard case,,,drone battery hard case,product_intent,member_2
+camera_drone,gopro,organizer,,,gopro organizer,product_intent,member_2
+camera_drone,gopro,case,,,gopro case,product_intent,member_2
+camera_drone,camera,case,,,camera case,product_intent,member_2
+camera_drone,gopro,storage,,,gopro storage,product_intent,member_2
+camera_drone,gopro,protective case,,,gopro protective case,product_intent,member_2
+camera_drone,camera,holder,,,camera holder,product_intent,member_2
+camera_drone,camera lens,protective case,,,camera lens protective case,product_intent,member_2
+camera_drone,gopro,box,,,gopro box,product_intent,member_2
+camera_drone,camera,hard case,,,camera hard case,product_intent,member_2
+camera_drone,drone battery,,,safe storage for {obj},safe storage for drone battery,pain_or_howto,member_2
+camera_drone,drone,,,no good case for {obj},no good case for drone,pain_or_howto,member_2
+camera_drone,drone,,,best hard case for {obj},best hard case for drone,pain_or_howto,member_2
+camera_drone,drone battery,,,no good case for {obj},no good case for drone battery,pain_or_howto,member_2
+camera_drone,gopro,,,best hard case for {obj},best hard case for gopro,pain_or_howto,member_2
+camera_drone,drone battery,,,{obj} easy to break,drone battery easy to break,pain_or_howto,member_2
+camera_drone,camera,,,{obj} scratched easily,camera scratched easily,pain_or_howto,member_2
+camera_drone,camera lens,,,safe storage for {obj},safe storage for camera lens,pain_or_howto,member_2
+camera_drone,camera,,,best hard case for {obj},best hard case for camera,pain_or_howto,member_2
+camera_drone,camera,,,safe storage for {obj},safe storage for camera,pain_or_howto,member_2
+camera_drone,camera,,,{obj} needs a case,camera needs a case,pain_or_howto,member_2
+camera_drone,drone,,,{obj} needs a case,drone needs a case,pain_or_howto,member_2
+camera_drone,gopro,,,{obj} easy to break,gopro easy to break,pain_or_howto,member_2
+camera_drone,drone,,,how to store {obj},how to store drone,pain_or_howto,member_2
+camera_drone,camera lens,,,best hard case for {obj},best hard case for camera lens,pain_or_howto,member_2
+camera_drone,camera lens,,,{obj} scratched easily,camera lens scratched easily,pain_or_howto,member_2
+camera_drone,drone battery,,,{obj} needs a case,drone battery needs a case,pain_or_howto,member_2
+camera_drone,camera lens,,,{obj} needs a case,camera lens needs a case,pain_or_howto,member_2
+camera_drone,camera lens,,,how to protect {obj},how to protect camera lens,pain_or_howto,member_2
+camera_drone,camera lens,,,no good case for {obj},no good case for camera lens,pain_or_howto,member_2
+camera_drone,drone battery,,,how to store {obj},how to store drone battery,pain_or_howto,member_2
+camera_drone,gopro,,,{obj} scratched easily,gopro scratched easily,pain_or_howto,member_2
+camera_drone,gopro,,,how to protect {obj},how to protect gopro,pain_or_howto,member_2
+camera_drone,camera,,,how to protect {obj},how to protect camera,pain_or_howto,member_2
+camera_drone,gopro,,,safe storage for {obj},safe storage for gopro,pain_or_howto,member_2
+camera_drone,gopro,,,best way to carry {obj},best way to carry gopro,pain_or_howto,member_2
+camera_drone,camera,,,{obj} easy to break,camera easy to break,pain_or_howto,member_2
+camera_drone,camera lens,,,best way to carry {obj},best way to carry camera lens,pain_or_howto,member_2
+camera_drone,gopro,,,{obj} needs a case,gopro needs a case,pain_or_howto,member_2
+camera_drone,camera,,,how to store {obj},how to store camera,pain_or_howto,member_2
+camera_drone,drone battery,,,{obj} scratched easily,drone battery scratched easily,pain_or_howto,member_2
+camera_drone,drone,,,safe storage for {obj},safe storage for drone,pain_or_howto,member_2
+camera_drone,camera,,,best way to carry {obj},best way to carry camera,pain_or_howto,member_2
+camera_drone,gopro,,,no good case for {obj},no good case for gopro,pain_or_howto,member_2
+camera_drone,drone,,,{obj} easy to break,drone easy to break,pain_or_howto,member_2
+digital_accessories,ssd,organizer,daily use,,ssd organizer daily use,product_intent_scenario,member_3
+digital_accessories,power bank,box,how to carry,,power bank box how to carry,product_intent_scenario,member_3
+digital_accessories,hard drive,hard case,setup,,hard drive hard case setup,product_intent_scenario,member_3
+digital_accessories,power bank,storage,how to use,,power bank storage how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,case,desk setup,,hard drive case desk setup,product_intent_scenario,member_3
+digital_accessories,ssd,holder,travel,,ssd holder travel,product_intent_scenario,member_3
+digital_accessories,hard drive,box,how to store,,hard drive box how to store,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,daily use,,charger carrying case daily use,product_intent_scenario,member_3
+digital_accessories,ssd,travel case,unboxing,,ssd travel case unboxing,product_intent_scenario,member_3
+digital_accessories,cables,holder,how to store,,cables holder how to store,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,EDC,,power bank travel case EDC,product_intent_scenario,member_3
+digital_accessories,charger,storage,unboxing,,charger storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,holder,how to store,,charger holder how to store,product_intent_scenario,member_3
+digital_accessories,cables,case,review,,cables case review,product_intent_scenario,member_3
+digital_accessories,usb hub,holder,how to carry,,usb hub holder how to carry,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,travel,,charger carrying case travel,product_intent_scenario,member_3
+digital_accessories,charger,case,setup,,charger case setup,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,desk setup,,ssd protective case desk setup,product_intent_scenario,member_3
+digital_accessories,power bank,case,EDC,,power bank case EDC,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,how to use,,hard drive carrying case how to use,product_intent_scenario,member_3
+digital_accessories,cables,organizer,unboxing,,cables organizer unboxing,product_intent_scenario,member_3
+digital_accessories,cables,holder,EDC,,cables holder EDC,product_intent_scenario,member_3
+digital_accessories,charger,organizer,desk setup,,charger organizer desk setup,product_intent_scenario,member_3
+digital_accessories,hard drive,travel case,travel,,hard drive travel case travel,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,daily use,,ssd protective case daily use,product_intent_scenario,member_3
+digital_accessories,cables,protective case,review,,cables protective case review,product_intent_scenario,member_3
+digital_accessories,cables,box,EDC,,cables box EDC,product_intent_scenario,member_3
+digital_accessories,hard drive,holder,how to use,,hard drive holder how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,travel case,how to store,,hard drive travel case how to store,product_intent_scenario,member_3
+digital_accessories,usb hub,organizer,how to use,,usb hub organizer how to use,product_intent_scenario,member_3
+digital_accessories,cables,carrying case,how to use,,cables carrying case how to use,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,how to carry,,power bank travel case how to carry,product_intent_scenario,member_3
+digital_accessories,power bank,carrying case,travel,,power bank carrying case travel,product_intent_scenario,member_3
+digital_accessories,adapter,hard case,desk setup,,adapter hard case desk setup,product_intent_scenario,member_3
+digital_accessories,cables,organizer,setup,,cables organizer setup,product_intent_scenario,member_3
+digital_accessories,adapter,box,unboxing,,adapter box unboxing,product_intent_scenario,member_3
+digital_accessories,ssd,case,how to use,,ssd case how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,daily use,,hard drive carrying case daily use,product_intent_scenario,member_3
+digital_accessories,adapter,organizer,travel,,adapter organizer travel,product_intent_scenario,member_3
+digital_accessories,adapter,organizer,EDC,,adapter organizer EDC,product_intent_scenario,member_3
+digital_accessories,adapter,travel case,daily use,,adapter travel case daily use,product_intent_scenario,member_3
+digital_accessories,charger,storage,desk setup,,charger storage desk setup,product_intent_scenario,member_3
+digital_accessories,charger,travel case,travel,,charger travel case travel,product_intent_scenario,member_3
+digital_accessories,adapter,box,EDC,,adapter box EDC,product_intent_scenario,member_3
+digital_accessories,usb hub,holder,daily use,,usb hub holder daily use,product_intent_scenario,member_3
+digital_accessories,power bank,protective case,desk setup,,power bank protective case desk setup,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,how to use,,ssd protective case how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,storage,unboxing,,hard drive storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,EDC,,charger carrying case EDC,product_intent_scenario,member_3
+digital_accessories,adapter,travel case,review,,adapter travel case review,product_intent_scenario,member_3
+digital_accessories,cables,travel case,travel,,cables travel case travel,product_intent_scenario,member_3
+digital_accessories,adapter,hard case,travel,,adapter hard case travel,product_intent_scenario,member_3
+digital_accessories,charger,hard case,review,,charger hard case review,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,unboxing,,power bank travel case unboxing,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,review,,ssd protective case review,product_intent_scenario,member_3
+digital_accessories,cables,travel case,how to carry,,cables travel case how to carry,product_intent_scenario,member_3
+digital_accessories,cables,organizer,how to store,,cables organizer how to store,product_intent_scenario,member_3
+digital_accessories,ssd,case,travel,,ssd case travel,product_intent_scenario,member_3
+digital_accessories,power bank,storage,unboxing,,power bank storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,storage,review,,charger storage review,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,,,hard drive carrying case,product_intent,member_3
+digital_accessories,hard drive,storage,,,hard drive storage,product_intent,member_3
+digital_accessories,charger,case,,,charger case,product_intent,member_3
+digital_accessories,usb hub,carrying case,,,usb hub carrying case,product_intent,member_3
+digital_accessories,charger,holder,,,charger holder,product_intent,member_3
+digital_accessories,usb hub,case,,,usb hub case,product_intent,member_3
+digital_accessories,cables,carrying case,,,cables carrying case,product_intent,member_3
+digital_accessories,cables,storage,,,cables storage,product_intent,member_3
+digital_accessories,power bank,carrying case,,,power bank carrying case,product_intent,member_3
+digital_accessories,hard drive,box,,,hard drive box,product_intent,member_3
+digital_accessories,hard drive,hard case,,,hard drive hard case,product_intent,member_3
+digital_accessories,cables,case,,,cables case,product_intent,member_3
+digital_accessories,usb hub,organizer,,,usb hub organizer,product_intent,member_3
+digital_accessories,cables,organizer,,,cables organizer,product_intent,member_3
+digital_accessories,adapter,carrying case,,,adapter carrying case,product_intent,member_3
+digital_accessories,ssd,organizer,,,ssd organizer,product_intent,member_3
+digital_accessories,charger,storage,,,charger storage,product_intent,member_3
+digital_accessories,cables,travel case,,,cables travel case,product_intent,member_3
+digital_accessories,ssd,storage,,,ssd storage,product_intent,member_3
+digital_accessories,charger,travel case,,,charger travel case,product_intent,member_3
+digital_accessories,charger,box,,,charger box,product_intent,member_3
+digital_accessories,adapter,box,,,adapter box,product_intent,member_3
+digital_accessories,charger,organizer,,,charger organizer,product_intent,member_3
+digital_accessories,ssd,hard case,,,ssd hard case,product_intent,member_3
+digital_accessories,power bank,hard case,,,power bank hard case,product_intent,member_3
+digital_accessories,ssd,travel case,,,ssd travel case,product_intent,member_3
+digital_accessories,usb hub,holder,,,usb hub holder,product_intent,member_3
+digital_accessories,hard drive,case,,,hard drive case,product_intent,member_3
+digital_accessories,adapter,organizer,,,adapter organizer,product_intent,member_3
+digital_accessories,adapter,storage,,,adapter storage,product_intent,member_3
+digital_accessories,hard drive,,,no good case for {obj},no good case for hard drive,pain_or_howto,member_3
+digital_accessories,hard drive,,,safe storage for {obj},safe storage for hard drive,pain_or_howto,member_3
+digital_accessories,charger,,,how to protect {obj},how to protect charger,pain_or_howto,member_3
+digital_accessories,usb hub,,,no good case for {obj},no good case for usb hub,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} easy to break,charger easy to break,pain_or_howto,member_3
+digital_accessories,usb hub,,,how to protect {obj},how to protect usb hub,pain_or_howto,member_3
+digital_accessories,cables,,,no good case for {obj},no good case for cables,pain_or_howto,member_3
+digital_accessories,cables,,,safe storage for {obj},safe storage for cables,pain_or_howto,member_3
+digital_accessories,power bank,,,no good case for {obj},no good case for power bank,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} needs a case,hard drive needs a case,pain_or_howto,member_3
+digital_accessories,hard drive,,,how to store {obj},how to store hard drive,pain_or_howto,member_3
+digital_accessories,cables,,,how to protect {obj},how to protect cables,pain_or_howto,member_3
+digital_accessories,usb hub,,,{obj} scratched easily,usb hub scratched easily,pain_or_howto,member_3
+digital_accessories,cables,,,{obj} scratched easily,cables scratched easily,pain_or_howto,member_3
+digital_accessories,adapter,,,no good case for {obj},no good case for adapter,pain_or_howto,member_3
+digital_accessories,ssd,,,{obj} scratched easily,ssd scratched easily,pain_or_howto,member_3
+digital_accessories,charger,,,safe storage for {obj},safe storage for charger,pain_or_howto,member_3
+digital_accessories,cables,,,best hard case for {obj},best hard case for cables,pain_or_howto,member_3
+digital_accessories,ssd,,,safe storage for {obj},safe storage for ssd,pain_or_howto,member_3
+digital_accessories,charger,,,best hard case for {obj},best hard case for charger,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} needs a case,charger needs a case,pain_or_howto,member_3
+digital_accessories,adapter,,,{obj} needs a case,adapter needs a case,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} scratched easily,charger scratched easily,pain_or_howto,member_3
+digital_accessories,ssd,,,how to store {obj},how to store ssd,pain_or_howto,member_3
+digital_accessories,power bank,,,how to store {obj},how to store power bank,pain_or_howto,member_3
+digital_accessories,ssd,,,best hard case for {obj},best hard case for ssd,pain_or_howto,member_3
+digital_accessories,usb hub,,,{obj} easy to break,usb hub easy to break,pain_or_howto,member_3
+digital_accessories,hard drive,,,how to protect {obj},how to protect hard drive,pain_or_howto,member_3
+digital_accessories,adapter,,,{obj} scratched easily,adapter scratched easily,pain_or_howto,member_3
+digital_accessories,adapter,,,safe storage for {obj},safe storage for adapter,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} scratched easily,hard drive scratched easily,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} easy to break,hard drive easy to break,pain_or_howto,member_3
+digital_accessories,cables,,,{obj} needs a case,cables needs a case,pain_or_howto,member_3
+digital_accessories,adapter,,,how to protect {obj},how to protect adapter,pain_or_howto,member_3
+digital_accessories,power bank,,,best hard case for {obj},best hard case for power bank,pain_or_howto,member_3
+gaming,switch,carrying case,review,,switch carrying case review,product_intent_scenario,member_4
+valuable_items,makeup,hard case,daily use,,makeup hard case daily use,product_intent_scenario,member_4
+gaming,keyboard,holder,unboxing,,keyboard holder unboxing,product_intent_scenario,member_4
+valuable_items,collectibles,organizer,EDC,,collectibles organizer EDC,product_intent_scenario,member_4
+gaming,switch,storage,desk setup,,switch storage desk setup,product_intent_scenario,member_4
+valuable_items,cards,hard case,unboxing,,cards hard case unboxing,product_intent_scenario,member_4
+gaming,gaming gear,protective case,desk setup,,gaming gear protective case desk setup,product_intent_scenario,member_4
+gaming,steam deck,protective case,review,,steam deck protective case review,product_intent_scenario,member_4
+gaming,switch,carrying case,setup,,switch carrying case setup,product_intent_scenario,member_4
+gaming,switch,travel case,travel,,switch travel case travel,product_intent_scenario,member_4
+gaming,steam deck,organizer,desk setup,,steam deck organizer desk setup,product_intent_scenario,member_4
+valuable_items,jewelry,travel case,how to use,,jewelry travel case how to use,product_intent_scenario,member_4
+valuable_items,cards,travel case,unboxing,,cards travel case unboxing,product_intent_scenario,member_4
+gaming,steam deck,storage,review,,steam deck storage review,product_intent_scenario,member_4
+valuable_items,figurines,travel case,unboxing,,figurines travel case unboxing,product_intent_scenario,member_4
+valuable_items,collectibles,holder,review,,collectibles holder review,product_intent_scenario,member_4
+gaming,steam deck,carrying case,EDC,,steam deck carrying case EDC,product_intent_scenario,member_4
+valuable_items,watches,box,setup,,watches box setup,product_intent_scenario,member_4
+valuable_items,watches,travel case,daily use,,watches travel case daily use,product_intent_scenario,member_4
+gaming,switch,box,daily use,,switch box daily use,product_intent_scenario,member_4
+gaming,keyboard,storage,unboxing,,keyboard storage unboxing,product_intent_scenario,member_4
+valuable_items,cards,protective case,unboxing,,cards protective case unboxing,product_intent_scenario,member_4
+valuable_items,figurines,holder,EDC,,figurines holder EDC,product_intent_scenario,member_4
+gaming,gaming gear,box,how to use,,gaming gear box how to use,product_intent_scenario,member_4
+valuable_items,collectibles,case,setup,,collectibles case setup,product_intent_scenario,member_4
+gaming,gaming gear,carrying case,how to carry,,gaming gear carrying case how to carry,product_intent_scenario,member_4
+gaming,switch,storage,review,,switch storage review,product_intent_scenario,member_4
+valuable_items,makeup,protective case,daily use,,makeup protective case daily use,product_intent_scenario,member_4
+valuable_items,figurines,protective case,EDC,,figurines protective case EDC,product_intent_scenario,member_4
+valuable_items,jewelry,carrying case,setup,,jewelry carrying case setup,product_intent_scenario,member_4
+gaming,keyboard,travel case,review,,keyboard travel case review,product_intent_scenario,member_4
+valuable_items,cards,storage,travel,,cards storage travel,product_intent_scenario,member_4
+gaming,gaming gear,protective case,EDC,,gaming gear protective case EDC,product_intent_scenario,member_4
+valuable_items,jewelry,travel case,unboxing,,jewelry travel case unboxing,product_intent_scenario,member_4
+valuable_items,collectibles,carrying case,how to store,,collectibles carrying case how to store,product_intent_scenario,member_4
+valuable_items,figurines,organizer,how to store,,figurines organizer how to store,product_intent_scenario,member_4
+gaming,switch,protective case,how to use,,switch protective case how to use,product_intent_scenario,member_4
+valuable_items,collectibles,organizer,desk setup,,collectibles organizer desk setup,product_intent_scenario,member_4
+valuable_items,watches,carrying case,unboxing,,watches carrying case unboxing,product_intent_scenario,member_4
+gaming,keyboard,protective case,desk setup,,keyboard protective case desk setup,product_intent_scenario,member_4
+gaming,switch,box,how to use,,switch box how to use,product_intent_scenario,member_4
+gaming,keyboard,holder,desk setup,,keyboard holder desk setup,product_intent_scenario,member_4
+valuable_items,watches,hard case,review,,watches hard case review,product_intent_scenario,member_4
+valuable_items,cards,protective case,how to carry,,cards protective case how to carry,product_intent_scenario,member_4
+valuable_items,figurines,protective case,setup,,figurines protective case setup,product_intent_scenario,member_4
+valuable_items,collectibles,travel case,how to store,,collectibles travel case how to store,product_intent_scenario,member_4
+gaming,keyboard,storage,how to store,,keyboard storage how to store,product_intent_scenario,member_4
+valuable_items,jewelry,box,desk setup,,jewelry box desk setup,product_intent_scenario,member_4
+valuable_items,jewelry,organizer,how to carry,,jewelry organizer how to carry,product_intent_scenario,member_4
+valuable_items,makeup,protective case,setup,,makeup protective case setup,product_intent_scenario,member_4
+valuable_items,jewelry,case,how to use,,jewelry case how to use,product_intent_scenario,member_4
+gaming,gaming gear,travel case,setup,,gaming gear travel case setup,product_intent_scenario,member_4
+valuable_items,collectibles,case,desk setup,,collectibles case desk setup,product_intent_scenario,member_4
+gaming,gaming gear,hard case,review,,gaming gear hard case review,product_intent_scenario,member_4
+gaming,keyboard,box,daily use,,keyboard box daily use,product_intent_scenario,member_4
+gaming,keyboard,storage,how to use,,keyboard storage how to use,product_intent_scenario,member_4
+gaming,steam deck,organizer,daily use,,steam deck organizer daily use,product_intent_scenario,member_4
+valuable_items,watches,storage,travel,,watches storage travel,product_intent_scenario,member_4
+gaming,gaming gear,storage,setup,,gaming gear storage setup,product_intent_scenario,member_4
+valuable_items,collectibles,case,how to use,,collectibles case how to use,product_intent_scenario,member_4
+valuable_items,watches,organizer,,,watches organizer,product_intent,member_4
+gaming,keyboard,organizer,,,keyboard organizer,product_intent,member_4
+valuable_items,collectibles,hard case,,,collectibles hard case,product_intent,member_4
+valuable_items,figurines,carrying case,,,figurines carrying case,product_intent,member_4
+gaming,switch,case,,,switch case,product_intent,member_4
+gaming,keyboard,travel case,,,keyboard travel case,product_intent,member_4
+valuable_items,watches,storage,,,watches storage,product_intent,member_4
+valuable_items,figurines,protective case,,,figurines protective case,product_intent,member_4
+gaming,steam deck,hard case,,,steam deck hard case,product_intent,member_4
+valuable_items,watches,travel case,,,watches travel case,product_intent,member_4
+valuable_items,makeup,case,,,makeup case,product_intent,member_4
+gaming,gaming gear,travel case,,,gaming gear travel case,product_intent,member_4
+valuable_items,collectibles,protective case,,,collectibles protective case,product_intent,member_4
+valuable_items,makeup,holder,,,makeup holder,product_intent,member_4
+gaming,steam deck,storage,,,steam deck storage,product_intent,member_4
+gaming,switch,organizer,,,switch organizer,product_intent,member_4
+gaming,keyboard,case,,,keyboard case,product_intent,member_4
+gaming,gaming gear,hard case,,,gaming gear hard case,product_intent,member_4
+valuable_items,jewelry,organizer,,,jewelry organizer,product_intent,member_4
+valuable_items,collectibles,travel case,,,collectibles travel case,product_intent,member_4
+valuable_items,cards,hard case,,,cards hard case,product_intent,member_4
+valuable_items,figurines,box,,,figurines box,product_intent,member_4
+valuable_items,cards,organizer,,,cards organizer,product_intent,member_4
+gaming,gaming gear,storage,,,gaming gear storage,product_intent,member_4
+gaming,gaming gear,box,,,gaming gear box,product_intent,member_4
+gaming,steam deck,protective case,,,steam deck protective case,product_intent,member_4
+valuable_items,figurines,storage,,,figurines storage,product_intent,member_4
+valuable_items,figurines,organizer,,,figurines organizer,product_intent,member_4
+gaming,gaming gear,organizer,,,gaming gear organizer,product_intent,member_4
+valuable_items,cards,storage,,,cards storage,product_intent,member_4
+valuable_items,watches,,,{obj} scratched easily,watches scratched easily,pain_or_howto,member_4
+gaming,keyboard,,,{obj} scratched easily,keyboard scratched easily,pain_or_howto,member_4
+valuable_items,collectibles,,,how to store {obj},how to store collectibles,pain_or_howto,member_4
+valuable_items,figurines,,,no good case for {obj},no good case for figurines,pain_or_howto,member_4
+gaming,switch,,,how to protect {obj},how to protect switch,pain_or_howto,member_4
+gaming,keyboard,,,best hard case for {obj},best hard case for keyboard,pain_or_howto,member_4
+valuable_items,watches,,,safe storage for {obj},safe storage for watches,pain_or_howto,member_4
+valuable_items,figurines,,,best way to carry {obj},best way to carry figurines,pain_or_howto,member_4
+gaming,steam deck,,,how to store {obj},how to store steam deck,pain_or_howto,member_4
+valuable_items,watches,,,best hard case for {obj},best hard case for watches,pain_or_howto,member_4
+valuable_items,makeup,,,how to protect {obj},how to protect makeup,pain_or_howto,member_4
+gaming,gaming gear,,,best hard case for {obj},best hard case for gaming gear,pain_or_howto,member_4
+valuable_items,collectibles,,,best way to carry {obj},best way to carry collectibles,pain_or_howto,member_4
+valuable_items,makeup,,,{obj} easy to break,makeup easy to break,pain_or_howto,member_4
+gaming,steam deck,,,safe storage for {obj},safe storage for steam deck,pain_or_howto,member_4
+gaming,switch,,,{obj} scratched easily,switch scratched easily,pain_or_howto,member_4
+gaming,keyboard,,,how to protect {obj},how to protect keyboard,pain_or_howto,member_4
+gaming,gaming gear,,,how to store {obj},how to store gaming gear,pain_or_howto,member_4
+valuable_items,jewelry,,,{obj} scratched easily,jewelry scratched easily,pain_or_howto,member_4
+valuable_items,collectibles,,,best hard case for {obj},best hard case for collectibles,pain_or_howto,member_4
+valuable_items,cards,,,how to store {obj},how to store cards,pain_or_howto,member_4
+valuable_items,figurines,,,{obj} needs a case,figurines needs a case,pain_or_howto,member_4
+valuable_items,cards,,,{obj} scratched easily,cards scratched easily,pain_or_howto,member_4
+gaming,gaming gear,,,safe storage for {obj},safe storage for gaming gear,pain_or_howto,member_4
+gaming,gaming gear,,,{obj} needs a case,gaming gear needs a case,pain_or_howto,member_4
+gaming,steam deck,,,best way to carry {obj},best way to carry steam deck,pain_or_howto,member_4
+valuable_items,figurines,,,safe storage for {obj},safe storage for figurines,pain_or_howto,member_4
+valuable_items,figurines,,,{obj} scratched easily,figurines scratched easily,pain_or_howto,member_4
+gaming,gaming gear,,,{obj} scratched easily,gaming gear scratched easily,pain_or_howto,member_4
+valuable_items,cards,,,safe storage for {obj},safe storage for cards,pain_or_howto,member_4
+gaming,steam deck,,,how to protect {obj},how to protect steam deck,pain_or_howto,member_4
+valuable_items,figurines,,,{obj} easy to break,figurines easy to break,pain_or_howto,member_4
+gaming,switch,,,{obj} easy to break,switch easy to break,pain_or_howto,member_4
+valuable_items,watches,,,{obj} needs a case,watches needs a case,pain_or_howto,member_4
+valuable_items,jewelry,,,best way to carry {obj},best way to carry jewelry,pain_or_howto,member_4
+travel_outdoor,tools,organizer,daily use,,tools organizer daily use,product_intent_scenario,member_5
+travel_outdoor,tools,travel case,how to carry,,tools travel case how to carry,product_intent_scenario,member_5
+travel_outdoor,camping gear,protective case,daily use,,camping gear protective case daily use,product_intent_scenario,member_5
+travel_outdoor,travel gear,storage,review,,travel gear storage review,product_intent_scenario,member_5
+travel_outdoor,tools,holder,how to store,,tools holder how to store,product_intent_scenario,member_5
+travel_outdoor,camping gear,box,daily use,,camping gear box daily use,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,holder,how to store,,carry on essentials holder how to store,product_intent_scenario,member_5
+travel_outdoor,tools,travel case,daily use,,tools travel case daily use,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,travel case,EDC,,hiking equipment travel case EDC,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,protective case,daily use,,carry on essentials protective case daily use,product_intent_scenario,member_5
+travel_outdoor,camping gear,organizer,unboxing,,camping gear organizer unboxing,product_intent_scenario,member_5
+travel_outdoor,tools,carrying case,review,,tools carrying case review,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,review,,travel gear carrying case review,product_intent_scenario,member_5
+travel_outdoor,camping gear,holder,review,,camping gear holder review,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,organizer,travel,,carry on essentials organizer travel,product_intent_scenario,member_5
+travel_outdoor,camping gear,storage,how to carry,,camping gear storage how to carry,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,holder,unboxing,,hiking equipment holder unboxing,product_intent_scenario,member_5
+travel_outdoor,travel gear,holder,how to store,,travel gear holder how to store,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,travel,,travel gear carrying case travel,product_intent_scenario,member_5
+travel_outdoor,travel gear,storage,desk setup,,travel gear storage desk setup,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,how to use,,travel gear carrying case how to use,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,EDC,,travel gear carrying case EDC,product_intent_scenario,member_5
+travel_outdoor,tools,box,how to use,,tools box how to use,product_intent_scenario,member_5
+travel_outdoor,travel gear,case,desk setup,,travel gear case desk setup,product_intent_scenario,member_5
+travel_outdoor,camping gear,protective case,how to use,,camping gear protective case how to use,product_intent_scenario,member_5
+travel_outdoor,tools,box,how to carry,,tools box how to carry,product_intent_scenario,member_5
+travel_outdoor,tools,storage,travel,,tools storage travel,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,hard case,travel,,carry on essentials hard case travel,product_intent_scenario,member_5
+travel_outdoor,camping gear,organizer,daily use,,camping gear organizer daily use,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,storage,review,,hiking equipment storage review,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,box,daily use,,hiking equipment box daily use,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,box,how to carry,,carry on essentials box how to carry,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,box,EDC,,carry on essentials box EDC,product_intent_scenario,member_5
+travel_outdoor,camping gear,protective case,travel,,camping gear protective case travel,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,how to store,,travel gear carrying case how to store,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,travel case,how to carry,,carry on essentials travel case how to carry,product_intent_scenario,member_5
+travel_outdoor,tools,storage,how to store,,tools storage how to store,product_intent_scenario,member_5
+travel_outdoor,tools,carrying case,daily use,,tools carrying case daily use,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,daily use,,travel gear carrying case daily use,product_intent_scenario,member_5
+travel_outdoor,tools,travel case,how to store,,tools travel case how to store,product_intent_scenario,member_5
+travel_outdoor,tools,travel case,unboxing,,tools travel case unboxing,product_intent_scenario,member_5
+travel_outdoor,camping gear,box,how to use,,camping gear box how to use,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,setup,,travel gear carrying case setup,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,organizer,how to store,,hiking equipment organizer how to store,product_intent_scenario,member_5
+travel_outdoor,tools,storage,desk setup,,tools storage desk setup,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,travel case,how to store,,carry on essentials travel case how to store,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,organizer,setup,,hiking equipment organizer setup,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,case,how to store,,hiking equipment case how to store,product_intent_scenario,member_5
+travel_outdoor,tools,storage,EDC,,tools storage EDC,product_intent_scenario,member_5
+travel_outdoor,travel gear,carrying case,desk setup,,travel gear carrying case desk setup,product_intent_scenario,member_5
+travel_outdoor,travel gear,storage,how to use,,travel gear storage how to use,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,case,review,,hiking equipment case review,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,organizer,review,,carry on essentials organizer review,product_intent_scenario,member_5
+travel_outdoor,travel gear,travel case,setup,,travel gear travel case setup,product_intent_scenario,member_5
+travel_outdoor,carry on essentials,travel case,travel,,carry on essentials travel case travel,product_intent_scenario,member_5
+travel_outdoor,travel gear,hard case,unboxing,,travel gear hard case unboxing,product_intent_scenario,member_5
+travel_outdoor,tools,storage,how to carry,,tools storage how to carry,product_intent_scenario,member_5
+travel_outdoor,travel gear,hard case,how to store,,travel gear hard case how to store,product_intent_scenario,member_5
+travel_outdoor,camping gear,hard case,unboxing,,camping gear hard case unboxing,product_intent_scenario,member_5
+travel_outdoor,hiking equipment,storage,unboxing,,hiking equipment storage unboxing,product_intent_scenario,member_5
+travel_outdoor,tools,storage,,,tools storage,product_intent,member_5
+travel_outdoor,hiking equipment,carrying case,,,hiking equipment carrying case,product_intent,member_5
+travel_outdoor,hiking equipment,travel case,,,hiking equipment travel case,product_intent,member_5
+travel_outdoor,tools,carrying case,,,tools carrying case,product_intent,member_5
+travel_outdoor,carry on essentials,travel case,,,carry on essentials travel case,product_intent,member_5
+travel_outdoor,tools,holder,,,tools holder,product_intent,member_5
+travel_outdoor,travel gear,organizer,,,travel gear organizer,product_intent,member_5
+travel_outdoor,camping gear,storage,,,camping gear storage,product_intent,member_5
+travel_outdoor,travel gear,travel case,,,travel gear travel case,product_intent,member_5
+travel_outdoor,travel gear,storage,,,travel gear storage,product_intent,member_5
+travel_outdoor,travel gear,box,,,travel gear box,product_intent,member_5
+travel_outdoor,hiking equipment,box,,,hiking equipment box,product_intent,member_5
+travel_outdoor,carry on essentials,holder,,,carry on essentials holder,product_intent,member_5
+travel_outdoor,hiking equipment,hard case,,,hiking equipment hard case,product_intent,member_5
+travel_outdoor,camping gear,travel case,,,camping gear travel case,product_intent,member_5
+travel_outdoor,camping gear,organizer,,,camping gear organizer,product_intent,member_5
+travel_outdoor,tools,box,,,tools box,product_intent,member_5
+travel_outdoor,camping gear,box,,,camping gear box,product_intent,member_5
+travel_outdoor,camping gear,case,,,camping gear case,product_intent,member_5
+travel_outdoor,camping gear,carrying case,,,camping gear carrying case,product_intent,member_5
+travel_outdoor,tools,hard case,,,tools hard case,product_intent,member_5
+travel_outdoor,carry on essentials,organizer,,,carry on essentials organizer,product_intent,member_5
+travel_outdoor,carry on essentials,case,,,carry on essentials case,product_intent,member_5
+travel_outdoor,travel gear,case,,,travel gear case,product_intent,member_5
+travel_outdoor,carry on essentials,storage,,,carry on essentials storage,product_intent,member_5
+travel_outdoor,carry on essentials,protective case,,,carry on essentials protective case,product_intent,member_5
+travel_outdoor,travel gear,holder,,,travel gear holder,product_intent,member_5
+travel_outdoor,camping gear,protective case,,,camping gear protective case,product_intent,member_5
+travel_outdoor,carry on essentials,box,,,carry on essentials box,product_intent,member_5
+travel_outdoor,travel gear,hard case,,,travel gear hard case,product_intent,member_5
+travel_outdoor,tools,,,safe storage for {obj},safe storage for tools,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,no good case for {obj},no good case for hiking equipment,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,best hard case for {obj},best hard case for hiking equipment,pain_or_howto,member_5
+travel_outdoor,tools,,,no good case for {obj},no good case for tools,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,best hard case for {obj},best hard case for carry on essentials,pain_or_howto,member_5
+travel_outdoor,tools,,,{obj} easy to break,tools easy to break,pain_or_howto,member_5
+travel_outdoor,travel gear,,,{obj} scratched easily,travel gear scratched easily,pain_or_howto,member_5
+travel_outdoor,camping gear,,,safe storage for {obj},safe storage for camping gear,pain_or_howto,member_5
+travel_outdoor,travel gear,,,best hard case for {obj},best hard case for travel gear,pain_or_howto,member_5
+travel_outdoor,travel gear,,,safe storage for {obj},safe storage for travel gear,pain_or_howto,member_5
+travel_outdoor,travel gear,,,{obj} needs a case,travel gear needs a case,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,{obj} needs a case,hiking equipment needs a case,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,{obj} easy to break,carry on essentials easy to break,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,how to store {obj},how to store hiking equipment,pain_or_howto,member_5
+travel_outdoor,camping gear,,,best hard case for {obj},best hard case for camping gear,pain_or_howto,member_5
+travel_outdoor,camping gear,,,{obj} scratched easily,camping gear scratched easily,pain_or_howto,member_5
+travel_outdoor,tools,,,{obj} needs a case,tools needs a case,pain_or_howto,member_5
+travel_outdoor,camping gear,,,{obj} needs a case,camping gear needs a case,pain_or_howto,member_5
+travel_outdoor,camping gear,,,how to protect {obj},how to protect camping gear,pain_or_howto,member_5
+travel_outdoor,camping gear,,,no good case for {obj},no good case for camping gear,pain_or_howto,member_5
+travel_outdoor,tools,,,how to store {obj},how to store tools,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,{obj} scratched easily,carry on essentials scratched easily,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,how to protect {obj},how to protect carry on essentials,pain_or_howto,member_5
+travel_outdoor,travel gear,,,how to protect {obj},how to protect travel gear,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,safe storage for {obj},safe storage for carry on essentials,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,best way to carry {obj},best way to carry carry on essentials,pain_or_howto,member_5
+travel_outdoor,travel gear,,,{obj} easy to break,travel gear easy to break,pain_or_howto,member_5
+travel_outdoor,camping gear,,,best way to carry {obj},best way to carry camping gear,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,{obj} needs a case,carry on essentials needs a case,pain_or_howto,member_5
+travel_outdoor,travel gear,,,how to store {obj},how to store travel gear,pain_or_howto,member_5
+travel_outdoor,tools,,,{obj} scratched easily,tools scratched easily,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,safe storage for {obj},safe storage for hiking equipment,pain_or_howto,member_5
+travel_outdoor,travel gear,,,best way to carry {obj},best way to carry travel gear,pain_or_howto,member_5
+travel_outdoor,carry on essentials,,,no good case for {obj},no good case for carry on essentials,pain_or_howto,member_5
+travel_outdoor,hiking equipment,,,{obj} easy to break,hiking equipment easy to break,pain_or_howto,member_5
+global,,,,,easy to break,global_demand_signal,leader
+global,,,,,wish it had a case,global_demand_signal,leader
+global,,,,,no storage,global_demand_signal,leader
+global,,,,,messy cables,global_demand_signal,leader
+global,,,,,needs a hard case,global_demand_signal,leader
+global,,,,,needs a case,global_demand_signal,leader
+global,,,,,hard to carry,global_demand_signal,leader
+global,,,,,not protected,global_demand_signal,leader
+global,,,,,scratched easily,global_demand_signal,leader
+global,,,,,no protection,global_demand_signal,leader
+global,,,,,fragile,global_demand_signal,leader
+global,,,,,new gadgets 2025,global_trend,leader
+global,,,,,tiktok gadgets,global_trend,leader
+global,,,,,viral gadgets,global_trend,leader
+global,,,,,tech accessories 2025,global_trend,leader
+global,,,,,amazon finds tech,global_trend,leader

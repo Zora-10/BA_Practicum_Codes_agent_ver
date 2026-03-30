@@ -1,0 +1,126 @@
+﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
+digital_accessories,ssd,organizer,daily use,,ssd organizer daily use,product_intent_scenario,member_3
+digital_accessories,power bank,box,how to carry,,power bank box how to carry,product_intent_scenario,member_3
+digital_accessories,hard drive,hard case,setup,,hard drive hard case setup,product_intent_scenario,member_3
+digital_accessories,power bank,storage,how to use,,power bank storage how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,case,desk setup,,hard drive case desk setup,product_intent_scenario,member_3
+digital_accessories,ssd,holder,travel,,ssd holder travel,product_intent_scenario,member_3
+digital_accessories,hard drive,box,how to store,,hard drive box how to store,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,daily use,,charger carrying case daily use,product_intent_scenario,member_3
+digital_accessories,ssd,travel case,unboxing,,ssd travel case unboxing,product_intent_scenario,member_3
+digital_accessories,cables,holder,how to store,,cables holder how to store,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,EDC,,power bank travel case EDC,product_intent_scenario,member_3
+digital_accessories,charger,storage,unboxing,,charger storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,holder,how to store,,charger holder how to store,product_intent_scenario,member_3
+digital_accessories,cables,case,review,,cables case review,product_intent_scenario,member_3
+digital_accessories,usb hub,holder,how to carry,,usb hub holder how to carry,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,travel,,charger carrying case travel,product_intent_scenario,member_3
+digital_accessories,charger,case,setup,,charger case setup,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,desk setup,,ssd protective case desk setup,product_intent_scenario,member_3
+digital_accessories,power bank,case,EDC,,power bank case EDC,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,how to use,,hard drive carrying case how to use,product_intent_scenario,member_3
+digital_accessories,cables,organizer,unboxing,,cables organizer unboxing,product_intent_scenario,member_3
+digital_accessories,cables,holder,EDC,,cables holder EDC,product_intent_scenario,member_3
+digital_accessories,charger,organizer,desk setup,,charger organizer desk setup,product_intent_scenario,member_3
+digital_accessories,hard drive,travel case,travel,,hard drive travel case travel,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,daily use,,ssd protective case daily use,product_intent_scenario,member_3
+digital_accessories,cables,protective case,review,,cables protective case review,product_intent_scenario,member_3
+digital_accessories,cables,box,EDC,,cables box EDC,product_intent_scenario,member_3
+digital_accessories,hard drive,holder,how to use,,hard drive holder how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,travel case,how to store,,hard drive travel case how to store,product_intent_scenario,member_3
+digital_accessories,usb hub,organizer,how to use,,usb hub organizer how to use,product_intent_scenario,member_3
+digital_accessories,cables,carrying case,how to use,,cables carrying case how to use,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,how to carry,,power bank travel case how to carry,product_intent_scenario,member_3
+digital_accessories,power bank,carrying case,travel,,power bank carrying case travel,product_intent_scenario,member_3
+digital_accessories,adapter,hard case,desk setup,,adapter hard case desk setup,product_intent_scenario,member_3
+digital_accessories,cables,organizer,setup,,cables organizer setup,product_intent_scenario,member_3
+digital_accessories,adapter,box,unboxing,,adapter box unboxing,product_intent_scenario,member_3
+digital_accessories,ssd,case,how to use,,ssd case how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,daily use,,hard drive carrying case daily use,product_intent_scenario,member_3
+digital_accessories,adapter,organizer,travel,,adapter organizer travel,product_intent_scenario,member_3
+digital_accessories,adapter,organizer,EDC,,adapter organizer EDC,product_intent_scenario,member_3
+digital_accessories,adapter,travel case,daily use,,adapter travel case daily use,product_intent_scenario,member_3
+digital_accessories,charger,storage,desk setup,,charger storage desk setup,product_intent_scenario,member_3
+digital_accessories,charger,travel case,travel,,charger travel case travel,product_intent_scenario,member_3
+digital_accessories,adapter,box,EDC,,adapter box EDC,product_intent_scenario,member_3
+digital_accessories,usb hub,holder,daily use,,usb hub holder daily use,product_intent_scenario,member_3
+digital_accessories,power bank,protective case,desk setup,,power bank protective case desk setup,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,how to use,,ssd protective case how to use,product_intent_scenario,member_3
+digital_accessories,hard drive,storage,unboxing,,hard drive storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,carrying case,EDC,,charger carrying case EDC,product_intent_scenario,member_3
+digital_accessories,adapter,travel case,review,,adapter travel case review,product_intent_scenario,member_3
+digital_accessories,cables,travel case,travel,,cables travel case travel,product_intent_scenario,member_3
+digital_accessories,adapter,hard case,travel,,adapter hard case travel,product_intent_scenario,member_3
+digital_accessories,charger,hard case,review,,charger hard case review,product_intent_scenario,member_3
+digital_accessories,power bank,travel case,unboxing,,power bank travel case unboxing,product_intent_scenario,member_3
+digital_accessories,ssd,protective case,review,,ssd protective case review,product_intent_scenario,member_3
+digital_accessories,cables,travel case,how to carry,,cables travel case how to carry,product_intent_scenario,member_3
+digital_accessories,cables,organizer,how to store,,cables organizer how to store,product_intent_scenario,member_3
+digital_accessories,ssd,case,travel,,ssd case travel,product_intent_scenario,member_3
+digital_accessories,power bank,storage,unboxing,,power bank storage unboxing,product_intent_scenario,member_3
+digital_accessories,charger,storage,review,,charger storage review,product_intent_scenario,member_3
+digital_accessories,hard drive,carrying case,,,hard drive carrying case,product_intent,member_3
+digital_accessories,hard drive,storage,,,hard drive storage,product_intent,member_3
+digital_accessories,charger,case,,,charger case,product_intent,member_3
+digital_accessories,usb hub,carrying case,,,usb hub carrying case,product_intent,member_3
+digital_accessories,charger,holder,,,charger holder,product_intent,member_3
+digital_accessories,usb hub,case,,,usb hub case,product_intent,member_3
+digital_accessories,cables,carrying case,,,cables carrying case,product_intent,member_3
+digital_accessories,cables,storage,,,cables storage,product_intent,member_3
+digital_accessories,power bank,carrying case,,,power bank carrying case,product_intent,member_3
+digital_accessories,hard drive,box,,,hard drive box,product_intent,member_3
+digital_accessories,hard drive,hard case,,,hard drive hard case,product_intent,member_3
+digital_accessories,cables,case,,,cables case,product_intent,member_3
+digital_accessories,usb hub,organizer,,,usb hub organizer,product_intent,member_3
+digital_accessories,cables,organizer,,,cables organizer,product_intent,member_3
+digital_accessories,adapter,carrying case,,,adapter carrying case,product_intent,member_3
+digital_accessories,ssd,organizer,,,ssd organizer,product_intent,member_3
+digital_accessories,charger,storage,,,charger storage,product_intent,member_3
+digital_accessories,cables,travel case,,,cables travel case,product_intent,member_3
+digital_accessories,ssd,storage,,,ssd storage,product_intent,member_3
+digital_accessories,charger,travel case,,,charger travel case,product_intent,member_3
+digital_accessories,charger,box,,,charger box,product_intent,member_3
+digital_accessories,adapter,box,,,adapter box,product_intent,member_3
+digital_accessories,charger,organizer,,,charger organizer,product_intent,member_3
+digital_accessories,ssd,hard case,,,ssd hard case,product_intent,member_3
+digital_accessories,power bank,hard case,,,power bank hard case,product_intent,member_3
+digital_accessories,ssd,travel case,,,ssd travel case,product_intent,member_3
+digital_accessories,usb hub,holder,,,usb hub holder,product_intent,member_3
+digital_accessories,hard drive,case,,,hard drive case,product_intent,member_3
+digital_accessories,adapter,organizer,,,adapter organizer,product_intent,member_3
+digital_accessories,adapter,storage,,,adapter storage,product_intent,member_3
+digital_accessories,hard drive,,,no good case for {obj},no good case for hard drive,pain_or_howto,member_3
+digital_accessories,hard drive,,,safe storage for {obj},safe storage for hard drive,pain_or_howto,member_3
+digital_accessories,charger,,,how to protect {obj},how to protect charger,pain_or_howto,member_3
+digital_accessories,usb hub,,,no good case for {obj},no good case for usb hub,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} easy to break,charger easy to break,pain_or_howto,member_3
+digital_accessories,usb hub,,,how to protect {obj},how to protect usb hub,pain_or_howto,member_3
+digital_accessories,cables,,,no good case for {obj},no good case for cables,pain_or_howto,member_3
+digital_accessories,cables,,,safe storage for {obj},safe storage for cables,pain_or_howto,member_3
+digital_accessories,power bank,,,no good case for {obj},no good case for power bank,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} needs a case,hard drive needs a case,pain_or_howto,member_3
+digital_accessories,hard drive,,,how to store {obj},how to store hard drive,pain_or_howto,member_3
+digital_accessories,cables,,,how to protect {obj},how to protect cables,pain_or_howto,member_3
+digital_accessories,usb hub,,,{obj} scratched easily,usb hub scratched easily,pain_or_howto,member_3
+digital_accessories,cables,,,{obj} scratched easily,cables scratched easily,pain_or_howto,member_3
+digital_accessories,adapter,,,no good case for {obj},no good case for adapter,pain_or_howto,member_3
+digital_accessories,ssd,,,{obj} scratched easily,ssd scratched easily,pain_or_howto,member_3
+digital_accessories,charger,,,safe storage for {obj},safe storage for charger,pain_or_howto,member_3
+digital_accessories,cables,,,best hard case for {obj},best hard case for cables,pain_or_howto,member_3
+digital_accessories,ssd,,,safe storage for {obj},safe storage for ssd,pain_or_howto,member_3
+digital_accessories,charger,,,best hard case for {obj},best hard case for charger,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} needs a case,charger needs a case,pain_or_howto,member_3
+digital_accessories,adapter,,,{obj} needs a case,adapter needs a case,pain_or_howto,member_3
+digital_accessories,charger,,,{obj} scratched easily,charger scratched easily,pain_or_howto,member_3
+digital_accessories,ssd,,,how to store {obj},how to store ssd,pain_or_howto,member_3
+digital_accessories,power bank,,,how to store {obj},how to store power bank,pain_or_howto,member_3
+digital_accessories,ssd,,,best hard case for {obj},best hard case for ssd,pain_or_howto,member_3
+digital_accessories,usb hub,,,{obj} easy to break,usb hub easy to break,pain_or_howto,member_3
+digital_accessories,hard drive,,,how to protect {obj},how to protect hard drive,pain_or_howto,member_3
+digital_accessories,adapter,,,{obj} scratched easily,adapter scratched easily,pain_or_howto,member_3
+digital_accessories,adapter,,,safe storage for {obj},safe storage for adapter,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} scratched easily,hard drive scratched easily,pain_or_howto,member_3
+digital_accessories,hard drive,,,{obj} easy to break,hard drive easy to break,pain_or_howto,member_3
+digital_accessories,cables,,,{obj} needs a case,cables needs a case,pain_or_howto,member_3
+digital_accessories,adapter,,,how to protect {obj},how to protect adapter,pain_or_howto,member_3
+digital_accessories,power bank,,,best hard case for {obj},best hard case for power bank,pain_or_howto,member_3

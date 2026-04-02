@@ -1,126 +1,79 @@
-﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
-consumer_electronics,headphones,organizer,desk setup,,headphones organizer desk setup,product_intent_scenario,member_1
-consumer_electronics,airpods,carrying case,how to use,,airpods carrying case how to use,product_intent_scenario,member_1
-consumer_electronics,macbook,carrying case,unboxing,,macbook carrying case unboxing,product_intent_scenario,member_1
-consumer_electronics,airpods,travel case,travel,,airpods travel case travel,product_intent_scenario,member_1
-consumer_electronics,macbook,hard case,desk setup,,macbook hard case desk setup,product_intent_scenario,member_1
-consumer_electronics,airpods,carrying case,daily use,,airpods carrying case daily use,product_intent_scenario,member_1
-consumer_electronics,ipad,protective case,daily use,,ipad protective case daily use,product_intent_scenario,member_1
-consumer_electronics,tablet,holder,EDC,,tablet holder EDC,product_intent_scenario,member_1
-consumer_electronics,ipad,carrying case,setup,,ipad carrying case setup,product_intent_scenario,member_1
-consumer_electronics,tablet,protective case,how to use,,tablet protective case how to use,product_intent_scenario,member_1
-consumer_electronics,airpods,case,travel,,airpods case travel,product_intent_scenario,member_1
-consumer_electronics,earbuds,protective case,daily use,,earbuds protective case daily use,product_intent_scenario,member_1
-consumer_electronics,tablet,holder,review,,tablet holder review,product_intent_scenario,member_1
-consumer_electronics,airpods,carrying case,how to store,,airpods carrying case how to store,product_intent_scenario,member_1
-consumer_electronics,ipad,case,setup,,ipad case setup,product_intent_scenario,member_1
-consumer_electronics,headphones,hard case,how to store,,headphones hard case how to store,product_intent_scenario,member_1
-consumer_electronics,macbook,organizer,how to carry,,macbook organizer how to carry,product_intent_scenario,member_1
-consumer_electronics,earbuds,hard case,unboxing,,earbuds hard case unboxing,product_intent_scenario,member_1
-consumer_electronics,macbook,carrying case,travel,,macbook carrying case travel,product_intent_scenario,member_1
-consumer_electronics,airpods,holder,how to store,,airpods holder how to store,product_intent_scenario,member_1
-consumer_electronics,tablet,hard case,how to use,,tablet hard case how to use,product_intent_scenario,member_1
-consumer_electronics,headphones,case,how to store,,headphones case how to store,product_intent_scenario,member_1
-consumer_electronics,ipad,protective case,EDC,,ipad protective case EDC,product_intent_scenario,member_1
-consumer_electronics,earbuds,carrying case,daily use,,earbuds carrying case daily use,product_intent_scenario,member_1
-consumer_electronics,macbook,protective case,desk setup,,macbook protective case desk setup,product_intent_scenario,member_1
-consumer_electronics,airpods,case,setup,,airpods case setup,product_intent_scenario,member_1
-consumer_electronics,headphones,case,review,,headphones case review,product_intent_scenario,member_1
-consumer_electronics,ipad,travel case,daily use,,ipad travel case daily use,product_intent_scenario,member_1
-consumer_electronics,airpods,hard case,review,,airpods hard case review,product_intent_scenario,member_1
-consumer_electronics,ipad,organizer,unboxing,,ipad organizer unboxing,product_intent_scenario,member_1
-consumer_electronics,tablet,hard case,unboxing,,tablet hard case unboxing,product_intent_scenario,member_1
-consumer_electronics,earbuds,travel case,travel,,earbuds travel case travel,product_intent_scenario,member_1
-consumer_electronics,headphones,box,how to store,,headphones box how to store,product_intent_scenario,member_1
-consumer_electronics,macbook,hard case,how to carry,,macbook hard case how to carry,product_intent_scenario,member_1
-consumer_electronics,ipad,carrying case,desk setup,,ipad carrying case desk setup,product_intent_scenario,member_1
-consumer_electronics,macbook,carrying case,how to carry,,macbook carrying case how to carry,product_intent_scenario,member_1
-consumer_electronics,tablet,holder,how to carry,,tablet holder how to carry,product_intent_scenario,member_1
-consumer_electronics,airpods,carrying case,setup,,airpods carrying case setup,product_intent_scenario,member_1
-consumer_electronics,headphones,hard case,travel,,headphones hard case travel,product_intent_scenario,member_1
-consumer_electronics,headphones,travel case,EDC,,headphones travel case EDC,product_intent_scenario,member_1
-consumer_electronics,ipad,holder,unboxing,,ipad holder unboxing,product_intent_scenario,member_1
-consumer_electronics,macbook,storage,EDC,,macbook storage EDC,product_intent_scenario,member_1
-consumer_electronics,earbuds,holder,review,,earbuds holder review,product_intent_scenario,member_1
-consumer_electronics,macbook,case,daily use,,macbook case daily use,product_intent_scenario,member_1
-consumer_electronics,earbuds,travel case,how to use,,earbuds travel case how to use,product_intent_scenario,member_1
-consumer_electronics,airpods,carrying case,desk setup,,airpods carrying case desk setup,product_intent_scenario,member_1
-consumer_electronics,tablet,case,setup,,tablet case setup,product_intent_scenario,member_1
-consumer_electronics,tablet,storage,travel,,tablet storage travel,product_intent_scenario,member_1
-consumer_electronics,macbook,travel case,how to use,,macbook travel case how to use,product_intent_scenario,member_1
-consumer_electronics,airpods,storage,review,,airpods storage review,product_intent_scenario,member_1
-consumer_electronics,headphones,holder,how to store,,headphones holder how to store,product_intent_scenario,member_1
-consumer_electronics,macbook,box,unboxing,,macbook box unboxing,product_intent_scenario,member_1
-consumer_electronics,macbook,organizer,daily use,,macbook organizer daily use,product_intent_scenario,member_1
-consumer_electronics,airpods,case,desk setup,,airpods case desk setup,product_intent_scenario,member_1
-consumer_electronics,macbook,carrying case,EDC,,macbook carrying case EDC,product_intent_scenario,member_1
-consumer_electronics,ipad,holder,how to store,,ipad holder how to store,product_intent_scenario,member_1
-consumer_electronics,earbuds,hard case,how to carry,,earbuds hard case how to carry,product_intent_scenario,member_1
-consumer_electronics,tablet,travel case,travel,,tablet travel case travel,product_intent_scenario,member_1
-consumer_electronics,tablet,hard case,review,,tablet hard case review,product_intent_scenario,member_1
-consumer_electronics,earbuds,box,EDC,,earbuds box EDC,product_intent_scenario,member_1
-consumer_electronics,headphones,hard case,,,headphones hard case,product_intent,member_1
-consumer_electronics,macbook,organizer,,,macbook organizer,product_intent,member_1
-consumer_electronics,macbook,storage,,,macbook storage,product_intent,member_1
-consumer_electronics,earbuds,storage,,,earbuds storage,product_intent,member_1
-consumer_electronics,tablet,travel case,,,tablet travel case,product_intent,member_1
-consumer_electronics,airpods,holder,,,airpods holder,product_intent,member_1
-consumer_electronics,earbuds,travel case,,,earbuds travel case,product_intent,member_1
-consumer_electronics,macbook,carrying case,,,macbook carrying case,product_intent,member_1
-consumer_electronics,airpods,storage,,,airpods storage,product_intent,member_1
-consumer_electronics,ipad,holder,,,ipad holder,product_intent,member_1
-consumer_electronics,earbuds,organizer,,,earbuds organizer,product_intent,member_1
-consumer_electronics,airpods,travel case,,,airpods travel case,product_intent,member_1
-consumer_electronics,headphones,travel case,,,headphones travel case,product_intent,member_1
-consumer_electronics,airpods,box,,,airpods box,product_intent,member_1
-consumer_electronics,ipad,carrying case,,,ipad carrying case,product_intent,member_1
-consumer_electronics,airpods,organizer,,,airpods organizer,product_intent,member_1
-consumer_electronics,tablet,hard case,,,tablet hard case,product_intent,member_1
-consumer_electronics,headphones,box,,,headphones box,product_intent,member_1
-consumer_electronics,macbook,case,,,macbook case,product_intent,member_1
-consumer_electronics,ipad,box,,,ipad box,product_intent,member_1
-consumer_electronics,macbook,holder,,,macbook holder,product_intent,member_1
-consumer_electronics,earbuds,box,,,earbuds box,product_intent,member_1
-consumer_electronics,earbuds,case,,,earbuds case,product_intent,member_1
-consumer_electronics,earbuds,carrying case,,,earbuds carrying case,product_intent,member_1
-consumer_electronics,ipad,storage,,,ipad storage,product_intent,member_1
-consumer_electronics,tablet,case,,,tablet case,product_intent,member_1
-consumer_electronics,headphones,carrying case,,,headphones carrying case,product_intent,member_1
-consumer_electronics,earbuds,protective case,,,earbuds protective case,product_intent,member_1
-consumer_electronics,airpods,case,,,airpods case,product_intent,member_1
-consumer_electronics,macbook,protective case,,,macbook protective case,product_intent,member_1
-consumer_electronics,headphones,,,how to store {obj},how to store headphones,pain_or_howto,member_1
-consumer_electronics,macbook,,,{obj} scratched easily,macbook scratched easily,pain_or_howto,member_1
-consumer_electronics,macbook,,,safe storage for {obj},safe storage for macbook,pain_or_howto,member_1
-consumer_electronics,earbuds,,,safe storage for {obj},safe storage for earbuds,pain_or_howto,member_1
-consumer_electronics,tablet,,,best hard case for {obj},best hard case for tablet,pain_or_howto,member_1
-consumer_electronics,airpods,,,{obj} easy to break,airpods easy to break,pain_or_howto,member_1
-consumer_electronics,earbuds,,,best hard case for {obj},best hard case for earbuds,pain_or_howto,member_1
-consumer_electronics,macbook,,,no good case for {obj},no good case for macbook,pain_or_howto,member_1
-consumer_electronics,airpods,,,safe storage for {obj},safe storage for airpods,pain_or_howto,member_1
-consumer_electronics,ipad,,,{obj} easy to break,ipad easy to break,pain_or_howto,member_1
-consumer_electronics,earbuds,,,{obj} scratched easily,earbuds scratched easily,pain_or_howto,member_1
-consumer_electronics,airpods,,,best hard case for {obj},best hard case for airpods,pain_or_howto,member_1
-consumer_electronics,headphones,,,best hard case for {obj},best hard case for headphones,pain_or_howto,member_1
-consumer_electronics,airpods,,,{obj} needs a case,airpods needs a case,pain_or_howto,member_1
-consumer_electronics,ipad,,,no good case for {obj},no good case for ipad,pain_or_howto,member_1
-consumer_electronics,airpods,,,{obj} scratched easily,airpods scratched easily,pain_or_howto,member_1
-consumer_electronics,tablet,,,how to store {obj},how to store tablet,pain_or_howto,member_1
-consumer_electronics,headphones,,,{obj} needs a case,headphones needs a case,pain_or_howto,member_1
-consumer_electronics,macbook,,,how to protect {obj},how to protect macbook,pain_or_howto,member_1
-consumer_electronics,ipad,,,{obj} needs a case,ipad needs a case,pain_or_howto,member_1
-consumer_electronics,macbook,,,{obj} easy to break,macbook easy to break,pain_or_howto,member_1
-consumer_electronics,earbuds,,,{obj} needs a case,earbuds needs a case,pain_or_howto,member_1
-consumer_electronics,earbuds,,,how to protect {obj},how to protect earbuds,pain_or_howto,member_1
-consumer_electronics,earbuds,,,no good case for {obj},no good case for earbuds,pain_or_howto,member_1
-consumer_electronics,ipad,,,safe storage for {obj},safe storage for ipad,pain_or_howto,member_1
-consumer_electronics,tablet,,,how to protect {obj},how to protect tablet,pain_or_howto,member_1
-consumer_electronics,headphones,,,no good case for {obj},no good case for headphones,pain_or_howto,member_1
-consumer_electronics,earbuds,,,best way to carry {obj},best way to carry earbuds,pain_or_howto,member_1
-consumer_electronics,airpods,,,how to protect {obj},how to protect airpods,pain_or_howto,member_1
-consumer_electronics,macbook,,,best way to carry {obj},best way to carry macbook,pain_or_howto,member_1
-consumer_electronics,ipad,,,how to protect {obj},how to protect ipad,pain_or_howto,member_1
-consumer_electronics,ipad,,,{obj} scratched easily,ipad scratched easily,pain_or_howto,member_1
-consumer_electronics,tablet,,,{obj} scratched easily,tablet scratched easily,pain_or_howto,member_1
-consumer_electronics,ipad,,,best way to carry {obj},best way to carry ipad,pain_or_howto,member_1
-consumer_electronics,macbook,,,how to store {obj},how to store macbook,pain_or_howto,member_1
+﻿category,object,query,query_type,assigned_to
+consumer_electronics,headphones,how to store headphones,object_problem,member_1
+consumer_electronics,macbook,macbook scratched easily,object_problem,member_1
+consumer_electronics,macbook,safe storage for macbook,object_problem,member_1
+consumer_electronics,earbuds,safe storage for earbuds,object_problem,member_1
+consumer_electronics,tablet,tablet damaged in bag,object_problem,member_1
+consumer_electronics,airpods,airpods easy to break,object_problem,member_1
+consumer_electronics,earbuds,earbuds damaged in bag,object_problem,member_1
+consumer_electronics,macbook,no good case for macbook,object_problem,member_1
+consumer_electronics,airpods,safe storage for airpods,object_problem,member_1
+consumer_electronics,ipad,ipad easy to break,object_problem,member_1
+consumer_electronics,earbuds,earbuds scratched easily,object_problem,member_1
+consumer_electronics,airpods,airpods damaged in bag,object_problem,member_1
+consumer_electronics,headphones,headphones damaged in bag,object_problem,member_1
+consumer_electronics,airpods,airpods needs a case,object_problem,member_1
+consumer_electronics,ipad,no good case for ipad,object_problem,member_1
+consumer_electronics,airpods,airpods scratched easily,object_problem,member_1
+consumer_electronics,tablet,how to store tablet,object_problem,member_1
+consumer_electronics,headphones,headphones needs a case,object_problem,member_1
+consumer_electronics,macbook,how to protect macbook,object_problem,member_1
+consumer_electronics,ipad,ipad needs a case,object_problem,member_1
+consumer_electronics,macbook,macbook easy to break,object_problem,member_1
+consumer_electronics,earbuds,earbuds needs a case,object_problem,member_1
+consumer_electronics,earbuds,how to protect earbuds,object_problem,member_1
+consumer_electronics,earbuds,no good case for earbuds,object_problem,member_1
+consumer_electronics,ipad,safe storage for ipad,object_problem,member_1
+consumer_electronics,tablet,how to protect tablet,object_problem,member_1
+consumer_electronics,headphones,no good case for headphones,object_problem,member_1
+consumer_electronics,earbuds,best way to carry earbuds,object_problem,member_1
+consumer_electronics,airpods,how to protect airpods,object_problem,member_1
+consumer_electronics,macbook,best way to carry macbook,object_problem,member_1
+consumer_electronics,ipad,how to protect ipad,object_problem,member_1
+consumer_electronics,ipad,ipad scratched easily,object_problem,member_1
+consumer_electronics,tablet,tablet scratched easily,object_problem,member_1
+consumer_electronics,ipad,best way to carry ipad,object_problem,member_1
+consumer_electronics,macbook,how to store macbook,object_problem,member_1
+consumer_electronics,airpods,how to store airpods,object_problem,member_1
+consumer_electronics,headphones,safe storage for headphones,object_problem,member_1
+consumer_electronics,airpods,best way to carry airpods,object_problem,member_1
+consumer_electronics,tablet,tablet easy to break,object_problem,member_1
+consumer_electronics,tablet,safe storage for tablet,object_problem,member_1
+consumer_electronics,ipad,ipad damaged in bag,object_problem,member_1
+consumer_electronics,headphones,headphones easy to break,object_problem,member_1
+consumer_electronics,tablet,no good case for tablet,object_problem,member_1
+consumer_electronics,earbuds,how to store earbuds,object_problem,member_1
+consumer_electronics,headphones,headphones scratched easily,object_problem,member_1
+consumer_electronics,headphones,how to protect headphones,object_problem,member_1
+consumer_electronics,macbook,macbook damaged in bag,object_problem,member_1
+consumer_electronics,headphones,best way to carry headphones,object_problem,member_1
+consumer_electronics,airpods,no good case for airpods,object_problem,member_1
+consumer_electronics,tablet,tablet needs a case,object_problem,member_1
+consumer_electronics,earbuds,earbuds easy to break,object_problem,member_1
+consumer_electronics,ipad,how to store ipad,object_problem,member_1
+consumer_electronics,macbook,macbook needs a case,object_problem,member_1
+consumer_electronics,tablet,best way to carry tablet,object_problem,member_1
+consumer_electronics,headphones,headphones travel setup,object_scenario,member_1
+consumer_electronics,tablet,tablet travel setup,object_scenario,member_1
+consumer_electronics,airpods,airpods travel setup,object_scenario,member_1
+consumer_electronics,tablet,tablet daily carry,object_scenario,member_1
+consumer_electronics,headphones,headphones accessories setup,object_scenario,member_1
+consumer_electronics,headphones,headphones bag setup,object_scenario,member_1
+consumer_electronics,ipad,ipad bag setup,object_scenario,member_1
+consumer_electronics,airpods,airpods bag setup,object_scenario,member_1
+consumer_electronics,macbook,macbook bag setup,object_scenario,member_1
+consumer_electronics,earbuds,earbuds bag setup,object_scenario,member_1
+consumer_electronics,airpods,airpods daily carry,object_scenario,member_1
+consumer_electronics,ipad,ipad travel setup,object_scenario,member_1
+consumer_electronics,ipad,ipad accessories setup,object_scenario,member_1
+consumer_electronics,airpods,airpods accessories setup,object_scenario,member_1
+consumer_electronics,earbuds,earbuds travel setup,object_scenario,member_1
+consumer_electronics,macbook,macbook daily carry,object_scenario,member_1
+consumer_electronics,tablet,tablet bag setup,object_scenario,member_1
+consumer_electronics,macbook,macbook travel setup,object_scenario,member_1
+consumer_electronics,macbook,macbook accessories setup,object_scenario,member_1
+consumer_electronics,earbuds,earbuds accessories setup,object_scenario,member_1
+consumer_electronics,headphones,headphones daily carry,object_scenario,member_1
+consumer_electronics,ipad,ipad daily carry,object_scenario,member_1
+consumer_electronics,tablet,tablet accessories setup,object_scenario,member_1
+consumer_electronics,earbuds,earbuds daily carry,object_scenario,member_1

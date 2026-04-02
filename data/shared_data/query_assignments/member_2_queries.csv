@@ -1,126 +1,63 @@
-﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
-camera_drone,drone battery,organizer,daily use,,drone battery organizer daily use,product_intent_scenario,member_2
-camera_drone,drone battery,travel case,how to carry,,drone battery travel case how to carry,product_intent_scenario,member_2
-camera_drone,camera lens,protective case,daily use,,camera lens protective case daily use,product_intent_scenario,member_2
-camera_drone,camera,storage,review,,camera storage review,product_intent_scenario,member_2
-camera_drone,drone battery,holder,how to store,,drone battery holder how to store,product_intent_scenario,member_2
-camera_drone,camera lens,box,daily use,,camera lens box daily use,product_intent_scenario,member_2
-camera_drone,gopro,holder,how to store,,gopro holder how to store,product_intent_scenario,member_2
-camera_drone,drone battery,travel case,daily use,,drone battery travel case daily use,product_intent_scenario,member_2
-camera_drone,drone,travel case,EDC,,drone travel case EDC,product_intent_scenario,member_2
-camera_drone,gopro,protective case,daily use,,gopro protective case daily use,product_intent_scenario,member_2
-camera_drone,camera lens,organizer,unboxing,,camera lens organizer unboxing,product_intent_scenario,member_2
-camera_drone,drone battery,carrying case,review,,drone battery carrying case review,product_intent_scenario,member_2
-camera_drone,camera,carrying case,review,,camera carrying case review,product_intent_scenario,member_2
-camera_drone,camera lens,holder,review,,camera lens holder review,product_intent_scenario,member_2
-camera_drone,gopro,organizer,travel,,gopro organizer travel,product_intent_scenario,member_2
-camera_drone,camera lens,storage,how to carry,,camera lens storage how to carry,product_intent_scenario,member_2
-camera_drone,drone,holder,unboxing,,drone holder unboxing,product_intent_scenario,member_2
-camera_drone,camera,holder,how to store,,camera holder how to store,product_intent_scenario,member_2
-camera_drone,camera,carrying case,travel,,camera carrying case travel,product_intent_scenario,member_2
-camera_drone,camera,storage,desk setup,,camera storage desk setup,product_intent_scenario,member_2
-camera_drone,camera,carrying case,how to use,,camera carrying case how to use,product_intent_scenario,member_2
-camera_drone,camera,carrying case,EDC,,camera carrying case EDC,product_intent_scenario,member_2
-camera_drone,drone battery,box,how to use,,drone battery box how to use,product_intent_scenario,member_2
-camera_drone,camera,case,desk setup,,camera case desk setup,product_intent_scenario,member_2
-camera_drone,camera lens,protective case,how to use,,camera lens protective case how to use,product_intent_scenario,member_2
-camera_drone,drone battery,box,how to carry,,drone battery box how to carry,product_intent_scenario,member_2
-camera_drone,drone battery,storage,travel,,drone battery storage travel,product_intent_scenario,member_2
-camera_drone,gopro,hard case,travel,,gopro hard case travel,product_intent_scenario,member_2
-camera_drone,camera lens,organizer,daily use,,camera lens organizer daily use,product_intent_scenario,member_2
-camera_drone,drone,storage,review,,drone storage review,product_intent_scenario,member_2
-camera_drone,drone,box,daily use,,drone box daily use,product_intent_scenario,member_2
-camera_drone,gopro,box,how to carry,,gopro box how to carry,product_intent_scenario,member_2
-camera_drone,gopro,box,EDC,,gopro box EDC,product_intent_scenario,member_2
-camera_drone,camera lens,protective case,travel,,camera lens protective case travel,product_intent_scenario,member_2
-camera_drone,camera,carrying case,how to store,,camera carrying case how to store,product_intent_scenario,member_2
-camera_drone,gopro,travel case,how to carry,,gopro travel case how to carry,product_intent_scenario,member_2
-camera_drone,drone battery,storage,how to store,,drone battery storage how to store,product_intent_scenario,member_2
-camera_drone,drone battery,carrying case,daily use,,drone battery carrying case daily use,product_intent_scenario,member_2
-camera_drone,camera,carrying case,daily use,,camera carrying case daily use,product_intent_scenario,member_2
-camera_drone,drone battery,travel case,how to store,,drone battery travel case how to store,product_intent_scenario,member_2
-camera_drone,drone battery,travel case,unboxing,,drone battery travel case unboxing,product_intent_scenario,member_2
-camera_drone,camera lens,box,how to use,,camera lens box how to use,product_intent_scenario,member_2
-camera_drone,camera,carrying case,setup,,camera carrying case setup,product_intent_scenario,member_2
-camera_drone,drone,organizer,how to store,,drone organizer how to store,product_intent_scenario,member_2
-camera_drone,drone battery,storage,desk setup,,drone battery storage desk setup,product_intent_scenario,member_2
-camera_drone,gopro,travel case,how to store,,gopro travel case how to store,product_intent_scenario,member_2
-camera_drone,drone,organizer,setup,,drone organizer setup,product_intent_scenario,member_2
-camera_drone,drone,case,how to store,,drone case how to store,product_intent_scenario,member_2
-camera_drone,drone battery,storage,EDC,,drone battery storage EDC,product_intent_scenario,member_2
-camera_drone,camera,carrying case,desk setup,,camera carrying case desk setup,product_intent_scenario,member_2
-camera_drone,camera,storage,how to use,,camera storage how to use,product_intent_scenario,member_2
-camera_drone,drone,case,review,,drone case review,product_intent_scenario,member_2
-camera_drone,gopro,organizer,review,,gopro organizer review,product_intent_scenario,member_2
-camera_drone,camera,travel case,setup,,camera travel case setup,product_intent_scenario,member_2
-camera_drone,gopro,travel case,travel,,gopro travel case travel,product_intent_scenario,member_2
-camera_drone,camera,hard case,unboxing,,camera hard case unboxing,product_intent_scenario,member_2
-camera_drone,drone battery,storage,how to carry,,drone battery storage how to carry,product_intent_scenario,member_2
-camera_drone,camera,hard case,how to store,,camera hard case how to store,product_intent_scenario,member_2
-camera_drone,camera lens,hard case,unboxing,,camera lens hard case unboxing,product_intent_scenario,member_2
-camera_drone,drone,storage,unboxing,,drone storage unboxing,product_intent_scenario,member_2
-camera_drone,drone battery,storage,,,drone battery storage,product_intent,member_2
-camera_drone,drone,carrying case,,,drone carrying case,product_intent,member_2
-camera_drone,drone,travel case,,,drone travel case,product_intent,member_2
-camera_drone,drone battery,carrying case,,,drone battery carrying case,product_intent,member_2
-camera_drone,gopro,travel case,,,gopro travel case,product_intent,member_2
-camera_drone,drone battery,holder,,,drone battery holder,product_intent,member_2
-camera_drone,camera,organizer,,,camera organizer,product_intent,member_2
-camera_drone,camera lens,storage,,,camera lens storage,product_intent,member_2
-camera_drone,camera,travel case,,,camera travel case,product_intent,member_2
-camera_drone,camera,storage,,,camera storage,product_intent,member_2
-camera_drone,camera,box,,,camera box,product_intent,member_2
-camera_drone,drone,box,,,drone box,product_intent,member_2
-camera_drone,gopro,holder,,,gopro holder,product_intent,member_2
-camera_drone,drone,hard case,,,drone hard case,product_intent,member_2
-camera_drone,camera lens,travel case,,,camera lens travel case,product_intent,member_2
-camera_drone,camera lens,organizer,,,camera lens organizer,product_intent,member_2
-camera_drone,drone battery,box,,,drone battery box,product_intent,member_2
-camera_drone,camera lens,box,,,camera lens box,product_intent,member_2
-camera_drone,camera lens,case,,,camera lens case,product_intent,member_2
-camera_drone,camera lens,carrying case,,,camera lens carrying case,product_intent,member_2
-camera_drone,drone battery,hard case,,,drone battery hard case,product_intent,member_2
-camera_drone,gopro,organizer,,,gopro organizer,product_intent,member_2
-camera_drone,gopro,case,,,gopro case,product_intent,member_2
-camera_drone,camera,case,,,camera case,product_intent,member_2
-camera_drone,gopro,storage,,,gopro storage,product_intent,member_2
-camera_drone,gopro,protective case,,,gopro protective case,product_intent,member_2
-camera_drone,camera,holder,,,camera holder,product_intent,member_2
-camera_drone,camera lens,protective case,,,camera lens protective case,product_intent,member_2
-camera_drone,gopro,box,,,gopro box,product_intent,member_2
-camera_drone,camera,hard case,,,camera hard case,product_intent,member_2
-camera_drone,drone battery,,,safe storage for {obj},safe storage for drone battery,pain_or_howto,member_2
-camera_drone,drone,,,no good case for {obj},no good case for drone,pain_or_howto,member_2
-camera_drone,drone,,,best hard case for {obj},best hard case for drone,pain_or_howto,member_2
-camera_drone,drone battery,,,no good case for {obj},no good case for drone battery,pain_or_howto,member_2
-camera_drone,gopro,,,best hard case for {obj},best hard case for gopro,pain_or_howto,member_2
-camera_drone,drone battery,,,{obj} easy to break,drone battery easy to break,pain_or_howto,member_2
-camera_drone,camera,,,{obj} scratched easily,camera scratched easily,pain_or_howto,member_2
-camera_drone,camera lens,,,safe storage for {obj},safe storage for camera lens,pain_or_howto,member_2
-camera_drone,camera,,,best hard case for {obj},best hard case for camera,pain_or_howto,member_2
-camera_drone,camera,,,safe storage for {obj},safe storage for camera,pain_or_howto,member_2
-camera_drone,camera,,,{obj} needs a case,camera needs a case,pain_or_howto,member_2
-camera_drone,drone,,,{obj} needs a case,drone needs a case,pain_or_howto,member_2
-camera_drone,gopro,,,{obj} easy to break,gopro easy to break,pain_or_howto,member_2
-camera_drone,drone,,,how to store {obj},how to store drone,pain_or_howto,member_2
-camera_drone,camera lens,,,best hard case for {obj},best hard case for camera lens,pain_or_howto,member_2
-camera_drone,camera lens,,,{obj} scratched easily,camera lens scratched easily,pain_or_howto,member_2
-camera_drone,drone battery,,,{obj} needs a case,drone battery needs a case,pain_or_howto,member_2
-camera_drone,camera lens,,,{obj} needs a case,camera lens needs a case,pain_or_howto,member_2
-camera_drone,camera lens,,,how to protect {obj},how to protect camera lens,pain_or_howto,member_2
-camera_drone,camera lens,,,no good case for {obj},no good case for camera lens,pain_or_howto,member_2
-camera_drone,drone battery,,,how to store {obj},how to store drone battery,pain_or_howto,member_2
-camera_drone,gopro,,,{obj} scratched easily,gopro scratched easily,pain_or_howto,member_2
-camera_drone,gopro,,,how to protect {obj},how to protect gopro,pain_or_howto,member_2
-camera_drone,camera,,,how to protect {obj},how to protect camera,pain_or_howto,member_2
-camera_drone,gopro,,,safe storage for {obj},safe storage for gopro,pain_or_howto,member_2
-camera_drone,gopro,,,best way to carry {obj},best way to carry gopro,pain_or_howto,member_2
-camera_drone,camera,,,{obj} easy to break,camera easy to break,pain_or_howto,member_2
-camera_drone,camera lens,,,best way to carry {obj},best way to carry camera lens,pain_or_howto,member_2
-camera_drone,gopro,,,{obj} needs a case,gopro needs a case,pain_or_howto,member_2
-camera_drone,camera,,,how to store {obj},how to store camera,pain_or_howto,member_2
-camera_drone,drone battery,,,{obj} scratched easily,drone battery scratched easily,pain_or_howto,member_2
-camera_drone,drone,,,safe storage for {obj},safe storage for drone,pain_or_howto,member_2
-camera_drone,camera,,,best way to carry {obj},best way to carry camera,pain_or_howto,member_2
-camera_drone,gopro,,,no good case for {obj},no good case for gopro,pain_or_howto,member_2
-camera_drone,drone,,,{obj} easy to break,drone easy to break,pain_or_howto,member_2
+﻿category,object,query,query_type,assigned_to
+camera_drone,drone battery,best way to carry drone battery,object_problem,member_2
+camera_drone,drone,no good case for drone,object_problem,member_2
+camera_drone,drone,drone damaged in bag,object_problem,member_2
+camera_drone,drone battery,how to store drone battery,object_problem,member_2
+camera_drone,gopro,gopro damaged in bag,object_problem,member_2
+camera_drone,drone battery,drone battery easy to break,object_problem,member_2
+camera_drone,camera,camera scratched easily,object_problem,member_2
+camera_drone,camera lens,safe storage for camera lens,object_problem,member_2
+camera_drone,camera,camera damaged in bag,object_problem,member_2
+camera_drone,camera,safe storage for camera,object_problem,member_2
+camera_drone,camera,camera needs a case,object_problem,member_2
+camera_drone,gopro,how to store gopro,object_problem,member_2
+camera_drone,gopro,gopro easy to break,object_problem,member_2
+camera_drone,drone,best way to carry drone,object_problem,member_2
+camera_drone,camera lens,camera lens damaged in bag,object_problem,member_2
+camera_drone,camera lens,camera lens scratched easily,object_problem,member_2
+camera_drone,drone battery,drone battery needs a case,object_problem,member_2
+camera_drone,camera lens,camera lens needs a case,object_problem,member_2
+camera_drone,camera lens,how to protect camera lens,object_problem,member_2
+camera_drone,camera lens,no good case for camera lens,object_problem,member_2
+camera_drone,gopro,gopro scratched easily,object_problem,member_2
+camera_drone,gopro,how to protect gopro,object_problem,member_2
+camera_drone,camera,how to protect camera,object_problem,member_2
+camera_drone,gopro,safe storage for gopro,object_problem,member_2
+camera_drone,drone battery,no good case for drone battery,object_problem,member_2
+camera_drone,camera,camera easy to break,object_problem,member_2
+camera_drone,camera lens,best way to carry camera lens,object_problem,member_2
+camera_drone,gopro,gopro needs a case,object_problem,member_2
+camera_drone,camera,how to store camera,object_problem,member_2
+camera_drone,drone battery,drone battery scratched easily,object_problem,member_2
+camera_drone,drone,drone scratched easily,object_problem,member_2
+camera_drone,camera,best way to carry camera,object_problem,member_2
+camera_drone,gopro,no good case for gopro,object_problem,member_2
+camera_drone,drone,drone needs a case,object_problem,member_2
+camera_drone,drone battery,how to protect drone battery,object_problem,member_2
+camera_drone,camera lens,how to store camera lens,object_problem,member_2
+camera_drone,drone,drone easy to break,object_problem,member_2
+camera_drone,drone,how to protect drone,object_problem,member_2
+camera_drone,drone battery,drone battery damaged in bag,object_problem,member_2
+camera_drone,drone,safe storage for drone,object_problem,member_2
+camera_drone,camera,no good case for camera,object_problem,member_2
+camera_drone,camera lens,camera lens easy to break,object_problem,member_2
+camera_drone,gopro,best way to carry gopro,object_problem,member_2
+camera_drone,drone battery,safe storage for drone battery,object_problem,member_2
+camera_drone,camera,camera travel setup,object_scenario,member_2
+camera_drone,camera,camera daily carry,object_scenario,member_2
+camera_drone,drone,drone daily carry,object_scenario,member_2
+camera_drone,camera lens,camera lens daily carry,object_scenario,member_2
+camera_drone,camera lens,camera lens travel setup,object_scenario,member_2
+camera_drone,gopro,gopro accessories setup,object_scenario,member_2
+camera_drone,drone battery,drone battery daily carry,object_scenario,member_2
+camera_drone,drone battery,drone battery bag setup,object_scenario,member_2
+camera_drone,gopro,gopro bag setup,object_scenario,member_2
+camera_drone,camera,camera accessories setup,object_scenario,member_2
+camera_drone,drone,drone accessories setup,object_scenario,member_2
+camera_drone,drone battery,drone battery accessories setup,object_scenario,member_2
+camera_drone,camera lens,camera lens bag setup,object_scenario,member_2
+camera_drone,gopro,gopro daily carry,object_scenario,member_2
+camera_drone,drone,drone bag setup,object_scenario,member_2
+camera_drone,gopro,gopro travel setup,object_scenario,member_2
+camera_drone,drone battery,drone battery travel setup,object_scenario,member_2
+camera_drone,camera lens,camera lens accessories setup,object_scenario,member_2

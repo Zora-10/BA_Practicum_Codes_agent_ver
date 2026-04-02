@@ -1,126 +1,101 @@
-﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
-gaming,switch,carrying case,review,,switch carrying case review,product_intent_scenario,member_4
-valuable_items,makeup,hard case,daily use,,makeup hard case daily use,product_intent_scenario,member_4
-gaming,keyboard,holder,unboxing,,keyboard holder unboxing,product_intent_scenario,member_4
-valuable_items,collectibles,organizer,EDC,,collectibles organizer EDC,product_intent_scenario,member_4
-gaming,switch,storage,desk setup,,switch storage desk setup,product_intent_scenario,member_4
-valuable_items,cards,hard case,unboxing,,cards hard case unboxing,product_intent_scenario,member_4
-gaming,gaming gear,protective case,desk setup,,gaming gear protective case desk setup,product_intent_scenario,member_4
-gaming,steam deck,protective case,review,,steam deck protective case review,product_intent_scenario,member_4
-gaming,switch,carrying case,setup,,switch carrying case setup,product_intent_scenario,member_4
-gaming,switch,travel case,travel,,switch travel case travel,product_intent_scenario,member_4
-gaming,steam deck,organizer,desk setup,,steam deck organizer desk setup,product_intent_scenario,member_4
-valuable_items,jewelry,travel case,how to use,,jewelry travel case how to use,product_intent_scenario,member_4
-valuable_items,cards,travel case,unboxing,,cards travel case unboxing,product_intent_scenario,member_4
-gaming,steam deck,storage,review,,steam deck storage review,product_intent_scenario,member_4
-valuable_items,figurines,travel case,unboxing,,figurines travel case unboxing,product_intent_scenario,member_4
-valuable_items,collectibles,holder,review,,collectibles holder review,product_intent_scenario,member_4
-gaming,steam deck,carrying case,EDC,,steam deck carrying case EDC,product_intent_scenario,member_4
-valuable_items,watches,box,setup,,watches box setup,product_intent_scenario,member_4
-valuable_items,watches,travel case,daily use,,watches travel case daily use,product_intent_scenario,member_4
-gaming,switch,box,daily use,,switch box daily use,product_intent_scenario,member_4
-gaming,keyboard,storage,unboxing,,keyboard storage unboxing,product_intent_scenario,member_4
-valuable_items,cards,protective case,unboxing,,cards protective case unboxing,product_intent_scenario,member_4
-valuable_items,figurines,holder,EDC,,figurines holder EDC,product_intent_scenario,member_4
-gaming,gaming gear,box,how to use,,gaming gear box how to use,product_intent_scenario,member_4
-valuable_items,collectibles,case,setup,,collectibles case setup,product_intent_scenario,member_4
-gaming,gaming gear,carrying case,how to carry,,gaming gear carrying case how to carry,product_intent_scenario,member_4
-gaming,switch,storage,review,,switch storage review,product_intent_scenario,member_4
-valuable_items,makeup,protective case,daily use,,makeup protective case daily use,product_intent_scenario,member_4
-valuable_items,figurines,protective case,EDC,,figurines protective case EDC,product_intent_scenario,member_4
-valuable_items,jewelry,carrying case,setup,,jewelry carrying case setup,product_intent_scenario,member_4
-gaming,keyboard,travel case,review,,keyboard travel case review,product_intent_scenario,member_4
-valuable_items,cards,storage,travel,,cards storage travel,product_intent_scenario,member_4
-gaming,gaming gear,protective case,EDC,,gaming gear protective case EDC,product_intent_scenario,member_4
-valuable_items,jewelry,travel case,unboxing,,jewelry travel case unboxing,product_intent_scenario,member_4
-valuable_items,collectibles,carrying case,how to store,,collectibles carrying case how to store,product_intent_scenario,member_4
-valuable_items,figurines,organizer,how to store,,figurines organizer how to store,product_intent_scenario,member_4
-gaming,switch,protective case,how to use,,switch protective case how to use,product_intent_scenario,member_4
-valuable_items,collectibles,organizer,desk setup,,collectibles organizer desk setup,product_intent_scenario,member_4
-valuable_items,watches,carrying case,unboxing,,watches carrying case unboxing,product_intent_scenario,member_4
-gaming,keyboard,protective case,desk setup,,keyboard protective case desk setup,product_intent_scenario,member_4
-gaming,switch,box,how to use,,switch box how to use,product_intent_scenario,member_4
-gaming,keyboard,holder,desk setup,,keyboard holder desk setup,product_intent_scenario,member_4
-valuable_items,watches,hard case,review,,watches hard case review,product_intent_scenario,member_4
-valuable_items,cards,protective case,how to carry,,cards protective case how to carry,product_intent_scenario,member_4
-valuable_items,figurines,protective case,setup,,figurines protective case setup,product_intent_scenario,member_4
-valuable_items,collectibles,travel case,how to store,,collectibles travel case how to store,product_intent_scenario,member_4
-gaming,keyboard,storage,how to store,,keyboard storage how to store,product_intent_scenario,member_4
-valuable_items,jewelry,box,desk setup,,jewelry box desk setup,product_intent_scenario,member_4
-valuable_items,jewelry,organizer,how to carry,,jewelry organizer how to carry,product_intent_scenario,member_4
-valuable_items,makeup,protective case,setup,,makeup protective case setup,product_intent_scenario,member_4
-valuable_items,jewelry,case,how to use,,jewelry case how to use,product_intent_scenario,member_4
-gaming,gaming gear,travel case,setup,,gaming gear travel case setup,product_intent_scenario,member_4
-valuable_items,collectibles,case,desk setup,,collectibles case desk setup,product_intent_scenario,member_4
-gaming,gaming gear,hard case,review,,gaming gear hard case review,product_intent_scenario,member_4
-gaming,keyboard,box,daily use,,keyboard box daily use,product_intent_scenario,member_4
-gaming,keyboard,storage,how to use,,keyboard storage how to use,product_intent_scenario,member_4
-gaming,steam deck,organizer,daily use,,steam deck organizer daily use,product_intent_scenario,member_4
-valuable_items,watches,storage,travel,,watches storage travel,product_intent_scenario,member_4
-gaming,gaming gear,storage,setup,,gaming gear storage setup,product_intent_scenario,member_4
-valuable_items,collectibles,case,how to use,,collectibles case how to use,product_intent_scenario,member_4
-valuable_items,watches,organizer,,,watches organizer,product_intent,member_4
-gaming,keyboard,organizer,,,keyboard organizer,product_intent,member_4
-valuable_items,collectibles,hard case,,,collectibles hard case,product_intent,member_4
-valuable_items,figurines,carrying case,,,figurines carrying case,product_intent,member_4
-gaming,switch,case,,,switch case,product_intent,member_4
-gaming,keyboard,travel case,,,keyboard travel case,product_intent,member_4
-valuable_items,watches,storage,,,watches storage,product_intent,member_4
-valuable_items,figurines,protective case,,,figurines protective case,product_intent,member_4
-gaming,steam deck,hard case,,,steam deck hard case,product_intent,member_4
-valuable_items,watches,travel case,,,watches travel case,product_intent,member_4
-valuable_items,makeup,case,,,makeup case,product_intent,member_4
-gaming,gaming gear,travel case,,,gaming gear travel case,product_intent,member_4
-valuable_items,collectibles,protective case,,,collectibles protective case,product_intent,member_4
-valuable_items,makeup,holder,,,makeup holder,product_intent,member_4
-gaming,steam deck,storage,,,steam deck storage,product_intent,member_4
-gaming,switch,organizer,,,switch organizer,product_intent,member_4
-gaming,keyboard,case,,,keyboard case,product_intent,member_4
-gaming,gaming gear,hard case,,,gaming gear hard case,product_intent,member_4
-valuable_items,jewelry,organizer,,,jewelry organizer,product_intent,member_4
-valuable_items,collectibles,travel case,,,collectibles travel case,product_intent,member_4
-valuable_items,cards,hard case,,,cards hard case,product_intent,member_4
-valuable_items,figurines,box,,,figurines box,product_intent,member_4
-valuable_items,cards,organizer,,,cards organizer,product_intent,member_4
-gaming,gaming gear,storage,,,gaming gear storage,product_intent,member_4
-gaming,gaming gear,box,,,gaming gear box,product_intent,member_4
-gaming,steam deck,protective case,,,steam deck protective case,product_intent,member_4
-valuable_items,figurines,storage,,,figurines storage,product_intent,member_4
-valuable_items,figurines,organizer,,,figurines organizer,product_intent,member_4
-gaming,gaming gear,organizer,,,gaming gear organizer,product_intent,member_4
-valuable_items,cards,storage,,,cards storage,product_intent,member_4
-valuable_items,watches,,,{obj} scratched easily,watches scratched easily,pain_or_howto,member_4
-gaming,keyboard,,,{obj} scratched easily,keyboard scratched easily,pain_or_howto,member_4
-valuable_items,collectibles,,,how to store {obj},how to store collectibles,pain_or_howto,member_4
-valuable_items,figurines,,,no good case for {obj},no good case for figurines,pain_or_howto,member_4
-gaming,switch,,,how to protect {obj},how to protect switch,pain_or_howto,member_4
-gaming,keyboard,,,best hard case for {obj},best hard case for keyboard,pain_or_howto,member_4
-valuable_items,watches,,,safe storage for {obj},safe storage for watches,pain_or_howto,member_4
-valuable_items,figurines,,,best way to carry {obj},best way to carry figurines,pain_or_howto,member_4
-gaming,steam deck,,,how to store {obj},how to store steam deck,pain_or_howto,member_4
-valuable_items,watches,,,best hard case for {obj},best hard case for watches,pain_or_howto,member_4
-valuable_items,makeup,,,how to protect {obj},how to protect makeup,pain_or_howto,member_4
-gaming,gaming gear,,,best hard case for {obj},best hard case for gaming gear,pain_or_howto,member_4
-valuable_items,collectibles,,,best way to carry {obj},best way to carry collectibles,pain_or_howto,member_4
-valuable_items,makeup,,,{obj} easy to break,makeup easy to break,pain_or_howto,member_4
-gaming,steam deck,,,safe storage for {obj},safe storage for steam deck,pain_or_howto,member_4
-gaming,switch,,,{obj} scratched easily,switch scratched easily,pain_or_howto,member_4
-gaming,keyboard,,,how to protect {obj},how to protect keyboard,pain_or_howto,member_4
-gaming,gaming gear,,,how to store {obj},how to store gaming gear,pain_or_howto,member_4
-valuable_items,jewelry,,,{obj} scratched easily,jewelry scratched easily,pain_or_howto,member_4
-valuable_items,collectibles,,,best hard case for {obj},best hard case for collectibles,pain_or_howto,member_4
-valuable_items,cards,,,how to store {obj},how to store cards,pain_or_howto,member_4
-valuable_items,figurines,,,{obj} needs a case,figurines needs a case,pain_or_howto,member_4
-valuable_items,cards,,,{obj} scratched easily,cards scratched easily,pain_or_howto,member_4
-gaming,gaming gear,,,safe storage for {obj},safe storage for gaming gear,pain_or_howto,member_4
-gaming,gaming gear,,,{obj} needs a case,gaming gear needs a case,pain_or_howto,member_4
-gaming,steam deck,,,best way to carry {obj},best way to carry steam deck,pain_or_howto,member_4
-valuable_items,figurines,,,safe storage for {obj},safe storage for figurines,pain_or_howto,member_4
-valuable_items,figurines,,,{obj} scratched easily,figurines scratched easily,pain_or_howto,member_4
-gaming,gaming gear,,,{obj} scratched easily,gaming gear scratched easily,pain_or_howto,member_4
-valuable_items,cards,,,safe storage for {obj},safe storage for cards,pain_or_howto,member_4
-gaming,steam deck,,,how to protect {obj},how to protect steam deck,pain_or_howto,member_4
-valuable_items,figurines,,,{obj} easy to break,figurines easy to break,pain_or_howto,member_4
-gaming,switch,,,{obj} easy to break,switch easy to break,pain_or_howto,member_4
-valuable_items,watches,,,{obj} needs a case,watches needs a case,pain_or_howto,member_4
-valuable_items,jewelry,,,best way to carry {obj},best way to carry jewelry,pain_or_howto,member_4
+﻿category,object,query,query_type,assigned_to
+valuable_items,watches,watches scratched easily,object_problem,member_4
+gaming,keyboard,keyboard scratched easily,object_problem,member_4
+valuable_items,collectibles,how to store collectibles,object_problem,member_4
+valuable_items,figurines,no good case for figurines,object_problem,member_4
+gaming,switch,how to protect switch,object_problem,member_4
+gaming,keyboard,keyboard damaged in bag,object_problem,member_4
+valuable_items,watches,safe storage for watches,object_problem,member_4
+valuable_items,figurines,best way to carry figurines,object_problem,member_4
+gaming,steam deck,how to store steam deck,object_problem,member_4
+valuable_items,watches,watches damaged in bag,object_problem,member_4
+valuable_items,makeup,how to protect makeup,object_problem,member_4
+gaming,gaming gear,gaming gear damaged in bag,object_problem,member_4
+valuable_items,collectibles,best way to carry collectibles,object_problem,member_4
+valuable_items,makeup,makeup easy to break,object_problem,member_4
+gaming,steam deck,safe storage for steam deck,object_problem,member_4
+gaming,switch,switch scratched easily,object_problem,member_4
+gaming,keyboard,how to protect keyboard,object_problem,member_4
+gaming,gaming gear,how to store gaming gear,object_problem,member_4
+valuable_items,jewelry,jewelry scratched easily,object_problem,member_4
+valuable_items,collectibles,collectibles damaged in bag,object_problem,member_4
+valuable_items,cards,how to store cards,object_problem,member_4
+valuable_items,figurines,figurines needs a case,object_problem,member_4
+valuable_items,cards,cards scratched easily,object_problem,member_4
+gaming,gaming gear,safe storage for gaming gear,object_problem,member_4
+gaming,gaming gear,gaming gear needs a case,object_problem,member_4
+gaming,steam deck,best way to carry steam deck,object_problem,member_4
+valuable_items,figurines,safe storage for figurines,object_problem,member_4
+valuable_items,figurines,figurines scratched easily,object_problem,member_4
+gaming,gaming gear,gaming gear scratched easily,object_problem,member_4
+valuable_items,cards,safe storage for cards,object_problem,member_4
+gaming,steam deck,how to protect steam deck,object_problem,member_4
+valuable_items,figurines,figurines easy to break,object_problem,member_4
+gaming,switch,switch easy to break,object_problem,member_4
+valuable_items,watches,watches needs a case,object_problem,member_4
+valuable_items,jewelry,best way to carry jewelry,object_problem,member_4
+gaming,steam deck,no good case for steam deck,object_problem,member_4
+valuable_items,jewelry,how to protect jewelry,object_problem,member_4
+gaming,gaming gear,no good case for gaming gear,object_problem,member_4
+gaming,switch,no good case for switch,object_problem,member_4
+valuable_items,cards,cards needs a case,object_problem,member_4
+gaming,gaming gear,how to protect gaming gear,object_problem,member_4
+gaming,keyboard,how to store keyboard,object_problem,member_4
+valuable_items,makeup,safe storage for makeup,object_problem,member_4
+gaming,keyboard,no good case for keyboard,object_problem,member_4
+valuable_items,jewelry,jewelry damaged in bag,object_problem,member_4
+gaming,steam deck,steam deck scratched easily,object_problem,member_4
+gaming,keyboard,keyboard needs a case,object_problem,member_4
+gaming,switch,safe storage for switch,object_problem,member_4
+gaming,steam deck,steam deck damaged in bag,object_problem,member_4
+valuable_items,watches,best way to carry watches,object_problem,member_4
+gaming,switch,switch damaged in bag,object_problem,member_4
+valuable_items,makeup,makeup needs a case,object_problem,member_4
+gaming,switch,switch needs a case,object_problem,member_4
+valuable_items,figurines,how to store figurines,object_problem,member_4
+valuable_items,watches,how to protect watches,object_problem,member_4
+valuable_items,cards,cards damaged in bag,object_problem,member_4
+valuable_items,makeup,makeup damaged in bag,object_problem,member_4
+valuable_items,collectibles,how to protect collectibles,object_problem,member_4
+valuable_items,watches,no good case for watches,object_problem,member_4
+valuable_items,jewelry,jewelry easy to break,object_problem,member_4
+valuable_items,watches,watches accessories setup,object_scenario,member_4
+valuable_items,watches,watches travel setup,object_scenario,member_4
+gaming,gaming gear,gaming gear accessories setup,object_scenario,member_4
+valuable_items,collectibles,collectibles daily carry,object_scenario,member_4
+gaming,steam deck,steam deck travel setup,object_scenario,member_4
+gaming,gaming gear,gaming gear travel setup,object_scenario,member_4
+valuable_items,makeup,makeup bag setup,object_scenario,member_4
+valuable_items,collectibles,collectibles accessories setup,object_scenario,member_4
+valuable_items,makeup,makeup accessories setup,object_scenario,member_4
+gaming,steam deck,steam deck daily carry,object_scenario,member_4
+valuable_items,collectibles,collectibles bag setup,object_scenario,member_4
+gaming,keyboard,keyboard bag setup,object_scenario,member_4
+gaming,gaming gear,gaming gear bag setup,object_scenario,member_4
+valuable_items,figurines,figurines accessories setup,object_scenario,member_4
+valuable_items,cards,cards daily carry,object_scenario,member_4
+gaming,keyboard,keyboard travel setup,object_scenario,member_4
+valuable_items,watches,watches bag setup,object_scenario,member_4
+valuable_items,collectibles,collectibles travel setup,object_scenario,member_4
+gaming,switch,switch travel setup,object_scenario,member_4
+valuable_items,cards,cards bag setup,object_scenario,member_4
+gaming,steam deck,steam deck bag setup,object_scenario,member_4
+gaming,keyboard,keyboard accessories setup,object_scenario,member_4
+gaming,switch,switch bag setup,object_scenario,member_4
+valuable_items,figurines,figurines bag setup,object_scenario,member_4
+valuable_items,jewelry,jewelry bag setup,object_scenario,member_4
+gaming,switch,switch daily carry,object_scenario,member_4
+valuable_items,figurines,figurines daily carry,object_scenario,member_4
+valuable_items,makeup,makeup travel setup,object_scenario,member_4
+gaming,switch,switch accessories setup,object_scenario,member_4
+valuable_items,cards,cards accessories setup,object_scenario,member_4
+valuable_items,jewelry,jewelry accessories setup,object_scenario,member_4
+valuable_items,cards,cards travel setup,object_scenario,member_4
+gaming,keyboard,keyboard daily carry,object_scenario,member_4
+valuable_items,jewelry,jewelry daily carry,object_scenario,member_4
+valuable_items,watches,watches daily carry,object_scenario,member_4
+valuable_items,jewelry,jewelry travel setup,object_scenario,member_4
+gaming,steam deck,steam deck accessories setup,object_scenario,member_4
+gaming,gaming gear,gaming gear daily carry,object_scenario,member_4
+valuable_items,figurines,figurines travel setup,object_scenario,member_4
+valuable_items,makeup,makeup daily carry,object_scenario,member_4

@@ -1,17 +1,35 @@
-﻿category,object,intent,scenario,pain_pattern,query,query_type,assigned_to
-global,,,,,easy to break,global_demand_signal,leader
-global,,,,,wish it had a case,global_demand_signal,leader
-global,,,,,no storage,global_demand_signal,leader
-global,,,,,messy cables,global_demand_signal,leader
-global,,,,,needs a hard case,global_demand_signal,leader
-global,,,,,needs a case,global_demand_signal,leader
-global,,,,,hard to carry,global_demand_signal,leader
-global,,,,,not protected,global_demand_signal,leader
-global,,,,,scratched easily,global_demand_signal,leader
-global,,,,,no protection,global_demand_signal,leader
-global,,,,,fragile,global_demand_signal,leader
-global,,,,,new gadgets 2025,global_trend,leader
-global,,,,,tiktok gadgets,global_trend,leader
-global,,,,,viral gadgets,global_trend,leader
-global,,,,,tech accessories 2025,global_trend,leader
-global,,,,,amazon finds tech,global_trend,leader
+﻿category,object,query,query_type,assigned_to
+generic,,desk setup tech gadgets,scenario,leader
+generic,,gaming setup accessories,scenario,leader
+generic,,what's in my bag tech,scenario,leader
+generic,,college tech essentials,scenario,leader
+generic,,camera bag setup,scenario,leader
+generic,,minimalist tech setup,scenario,leader
+generic,,EDC setup gadgets,scenario,leader
+generic,,everyday carry tech EDC,scenario,leader
+generic,,daily carry gadgets,scenario,leader
+generic,,travel gadgets packing,scenario,leader
+generic,,photography gear setup,scenario,leader
+generic,,work from home setup tech,scenario,leader
+generic,,tech travel setup,scenario,leader
+generic,,drone travel setup,scenario,leader
+generic,,safe storage for electronics,problem,leader
+generic,,how to store cables,problem,leader
+generic,,how to pack tech for travel,problem,leader
+generic,,how to protect electronics,problem,leader
+generic,,how to prevent scratches on devices,problem,leader
+generic,,how to organize tech accessories,problem,leader
+generic,,how to organize backpack tech,problem,leader
+generic,,how to store drone,problem,leader
+generic,,how to carry camera safely,problem,leader
+generic,,best way to protect gadgets,problem,leader
+generic,,drone accessories review,product_support,leader
+generic,,gadget storage solutions review,product_support,leader
+generic,,tech organizer review,product_support,leader
+generic,,camera accessories review,product_support,leader
+generic,,electronics carrying case review,product_support,leader
+global,,new gadgets you must have,trend,leader
+global,,latest tech accessories,trend,leader
+global,,amazon tech finds,trend,leader
+global,,viral tech gadgets,trend,leader
+global,,cool gadgets you need,trend,leader

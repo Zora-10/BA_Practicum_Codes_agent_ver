@@ -1,0 +1,31 @@
+category,object,query,type,assigned_to
+camera_optics,camera,camera unboxing,object,member_1
+camera_optics,camera,camera review,object,member_1
+camera_optics,camera,camera travel setup,object,member_1
+camera_optics,camera,camera bag setup,object,member_1
+camera_optics,camera,how to protect camera,object,member_1
+camera_optics,camera,camera damaged in bag,object,member_1
+camera_optics,camera lens,camera lens unboxing,object,member_1
+camera_optics,camera lens,camera lens review,object,member_1
+camera_optics,camera lens,camera lens travel setup,object,member_1
+camera_optics,camera lens,camera lens bag setup,object,member_1
+camera_optics,camera lens,how to protect camera lens,object,member_1
+camera_optics,camera lens,camera lens damaged in bag,object,member_1
+camera_optics,drone,drone unboxing,object,member_1
+camera_optics,drone,drone review,object,member_1
+camera_optics,drone,drone travel setup,object,member_1
+camera_optics,drone,drone bag setup,object,member_1
+camera_optics,drone,how to protect drone,object,member_1
+camera_optics,drone,drone damaged in bag,object,member_1
+camera_optics,gopro,gopro unboxing,object,member_1
+camera_optics,gopro,gopro review,object,member_1
+camera_optics,gopro,gopro travel setup,object,member_1
+camera_optics,gopro,gopro bag setup,object,member_1
+camera_optics,gopro,how to protect gopro,object,member_1
+camera_optics,gopro,gopro damaged in bag,object,member_1
+camera_optics,photography gear,photography gear unboxing,object,member_1
+camera_optics,photography gear,photography gear review,object,member_1
+camera_optics,photography gear,photography gear travel setup,object,member_1
+camera_optics,photography gear,photography gear bag setup,object,member_1
+camera_optics,photography gear,how to protect photography gear,object,member_1
+camera_optics,photography gear,photography gear damaged in bag,object,member_1

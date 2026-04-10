@@ -1,0 +1,67 @@
+category,object,query,type,assigned_to
+travel_outdoor,travel gear,travel gear unboxing,object,member_5
+travel_outdoor,travel gear,travel gear review,object,member_5
+travel_outdoor,travel gear,travel gear travel setup,object,member_5
+travel_outdoor,travel gear,travel gear bag setup,object,member_5
+travel_outdoor,travel gear,how to protect travel gear,object,member_5
+travel_outdoor,travel gear,travel gear damaged in bag,object,member_5
+travel_outdoor,camping gear,camping gear unboxing,object,member_5
+travel_outdoor,camping gear,camping gear review,object,member_5
+travel_outdoor,camping gear,camping gear travel setup,object,member_5
+travel_outdoor,camping gear,camping gear bag setup,object,member_5
+travel_outdoor,camping gear,how to protect camping gear,object,member_5
+travel_outdoor,camping gear,camping gear damaged in bag,object,member_5
+travel_outdoor,hiking gear,hiking gear unboxing,object,member_5
+travel_outdoor,hiking gear,hiking gear review,object,member_5
+travel_outdoor,hiking gear,hiking gear travel setup,object,member_5
+travel_outdoor,hiking gear,hiking gear bag setup,object,member_5
+travel_outdoor,hiking gear,how to protect hiking gear,object,member_5
+travel_outdoor,hiking gear,hiking gear damaged in bag,object,member_5
+travel_outdoor,outdoor equipment,outdoor equipment unboxing,object,member_5
+travel_outdoor,outdoor equipment,outdoor equipment review,object,member_5
+travel_outdoor,outdoor equipment,outdoor equipment travel setup,object,member_5
+travel_outdoor,outdoor equipment,outdoor equipment bag setup,object,member_5
+travel_outdoor,outdoor equipment,how to protect outdoor equipment,object,member_5
+travel_outdoor,outdoor equipment,outdoor equipment damaged in bag,object,member_5
+collectibles_valuables,watches,watches unboxing,object,member_5
+collectibles_valuables,watches,watches review,object,member_5
+collectibles_valuables,watches,watches travel setup,object,member_5
+collectibles_valuables,watches,watches bag setup,object,member_5
+collectibles_valuables,watches,how to protect watches,object,member_5
+collectibles_valuables,watches,watches damaged in bag,object,member_5
+collectibles_valuables,jewelry,jewelry unboxing,object,member_5
+collectibles_valuables,jewelry,jewelry review,object,member_5
+collectibles_valuables,jewelry,jewelry travel setup,object,member_5
+collectibles_valuables,jewelry,jewelry bag setup,object,member_5
+collectibles_valuables,jewelry,how to protect jewelry,object,member_5
+collectibles_valuables,jewelry,jewelry damaged in bag,object,member_5
+collectibles_valuables,collectibles,collectibles unboxing,object,member_5
+collectibles_valuables,collectibles,collectibles review,object,member_5
+collectibles_valuables,collectibles,collectibles travel setup,object,member_5
+collectibles_valuables,collectibles,collectibles bag setup,object,member_5
+collectibles_valuables,collectibles,how to protect collectibles,object,member_5
+collectibles_valuables,collectibles,collectibles damaged in bag,object,member_5
+collectibles_valuables,figurines,figurines unboxing,object,member_5
+collectibles_valuables,figurines,figurines review,object,member_5
+collectibles_valuables,figurines,figurines travel setup,object,member_5
+collectibles_valuables,figurines,figurines bag setup,object,member_5
+collectibles_valuables,figurines,how to protect figurines,object,member_5
+collectibles_valuables,figurines,figurines damaged in bag,object,member_5
+beauty_medical,makeup kit,makeup kit unboxing,object,member_5
+beauty_medical,makeup kit,makeup kit review,object,member_5
+beauty_medical,makeup kit,makeup kit travel setup,object,member_5
+beauty_medical,makeup kit,makeup kit bag setup,object,member_5
+beauty_medical,makeup kit,how to protect makeup kit,object,member_5
+beauty_medical,makeup kit,makeup kit damaged in bag,object,member_5
+beauty_medical,beauty devices,beauty devices unboxing,object,member_5
+beauty_medical,beauty devices,beauty devices review,object,member_5
+beauty_medical,beauty devices,beauty devices travel setup,object,member_5
+beauty_medical,beauty devices,beauty devices bag setup,object,member_5
+beauty_medical,beauty devices,how to protect beauty devices,object,member_5
+beauty_medical,beauty devices,beauty devices damaged in bag,object,member_5
+beauty_medical,medical devices,medical devices unboxing,object,member_5
+beauty_medical,medical devices,medical devices review,object,member_5
+beauty_medical,medical devices,medical devices travel setup,object,member_5
+beauty_medical,medical devices,medical devices bag setup,object,member_5
+beauty_medical,medical devices,how to protect medical devices,object,member_5
+beauty_medical,medical devices,medical devices damaged in bag,object,member_5

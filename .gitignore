@@ -3,3 +3,9 @@
 /temp
 
 /data
+
+/new/data
+/new/__pycache__
+/new/src/__pycache__
+
+/new/TODO.md

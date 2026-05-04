@@ -16,18 +16,49 @@ from typing import Optional
 
 class QuotaExceededError(Exception):
     """Raised when the LLM API returns a 429 rate-limit / quota exceeded error."""
-    def __init__(self, provider: str, message: str = ""):
+    def __init__(self, provider: str, message: str = "", partial_results: list = None):
         self.provider = provider
         self.message = message or f"{provider} quota exceeded"
+        self.partial_results = partial_results or []
         super().__init__(self.message)
 
 
 class APIError(Exception):
     """Raised when the LLM API call fails after all retries."""
-    def __init__(self, provider: str, batch_errors: list[dict]):
+    def __init__(self, provider: str, batch_errors: list[dict], partial_results: list = None):
         self.provider = provider
         self.batch_errors = batch_errors
+        self.partial_results = partial_results or []
         super().__init__(f"{provider} API error in {len(batch_errors)} batch(es)")
+
+
+class LLMCallError(Exception):
+    """Raised when any LLM call (API error, JSON parse, network, etc.) fails — stops immediately."""
+    def __init__(self, provider: str, reason: str, batch_idx: int = None, partial_results: list = None):
+        self.provider = provider
+        self.reason = reason
+        self.batch_idx = batch_idx
+        self.partial_results = partial_results or []
+        batch_info = f" batch {batch_idx+1}" if batch_idx is not None else ""
+        super().__init__(f"{provider}{batch_info}: {reason}")
+
+
+def _save_partial_and_raise(exc: Exception, model_provider: str, n_to_analyze: int | None, input_df: pd.DataFrame):
+    """Save partial results to parquet and re-raise the exception."""
+    partial = getattr(exc, "partial_results", None) or []
+    print(f"[ERROR] Stopping at batch. Saved {len(partial)} results.")
+    partial_df = pd.DataFrame(partial)
+    if not partial_df.empty:
+        partial_df["comment_id"] = partial_df["comment_id"].astype(str)
+        df_out = input_df.copy()
+        df_out["comment_id"] = df_out["comment_id"].astype(str)
+        df_out = df_out.merge(
+            partial_df[["comment_id", "signal", "confidence", "reason"]],
+            on="comment_id", how="left",
+        )
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        df_out.to_parquet(OUTPUT_DIR / f"demand_signals_full_{model_provider}_{ts}.parquet", index=False)
+    raise exc
 
 from .config import (
     CLEANED_DIR,
@@ -216,13 +247,16 @@ def call_llm_batch(
         raise ValueError(f"Unknown model_provider: {model_provider}")
 
     if raw is None:
-        return None
+        raise LLMCallError(model_provider, "LLM returned empty response", partial_results=None)
 
     try:
         return _extract_json(raw)
     except json.JSONDecodeError as e:
-        print(f"  JSON parse error ({model_provider}): {e}")
-        return None
+        raise LLMCallError(
+            model_provider,
+            f"JSON parse error: {e}. Raw response: {raw[:500] if raw else '(empty)'}",
+            partial_results=None,
+        )
 
 
 # ── Demand signal labels ────────────────────────────────────────────────────────
@@ -265,6 +299,7 @@ def run_demand_signal_detection(
     rate_limit_delay: float = 1.5,
     checkpoint_file: Path | None = None,
     progress_callback=None,
+    n_to_analyze: int | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Run LLM classification on cleaned comments.
@@ -292,37 +327,52 @@ def run_demand_signal_detection(
         cp_name = f"llm_{model_provider}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         checkpoint_file = CHECKPOINT_DIR / cp_name
     checkpoint = LLMCheckpoint(checkpoint_file)
-
     existing_results, resume_from = checkpoint.load()
-    if resume_from > 0:
-        print(f"[CHECKPOINT] Resuming from {resume_from} results")
 
     classified_ids = {r["comment_id"] for r in existing_results}
+    results_count = len(existing_results)
 
+    # Filter out already-classified comments first — must happen BEFORE n_batches
     df_work = df_work[
         ~df_work["comment_id"].astype(str).isin(classified_ids)
     ].reset_index(drop=True)
 
+    N = len(df_work)
+    n_batches = (N + batch_size - 1) // batch_size
+
+    print(f"[LLM] Starting demand signal detection: {N} comments, {n_batches} batches, batch_size={batch_size}, provider={model_provider}")
+    if resume_from > 0:
+        print(f"[LLM] Resuming — {resume_from} already-classified results loaded, {N} remaining to process")
+
     if df_work.empty:
         print("[INFO] All comments already classified.")
         results_df = pd.DataFrame(existing_results)
+        if results_df.empty:
+            results_df = pd.DataFrame(columns=["comment_id", "signal", "confidence", "reason"])
+        results_df["comment_id"] = results_df["comment_id"].astype(str)
+        df_output = input_df.copy()
+        df_output["comment_id"] = df_output["comment_id"].astype(str)
+        df_output = df_output.merge(
+            results_df[["comment_id", "signal", "confidence", "reason"]],
+            on="comment_id",
+            how="left",
+        )
+        df_signals = df_output[df_output["signal"].isin(DEMAND_SIGNAL_LIST)].copy()
+        print(f"[LLM] Done (checkpoint only). {len(df_signals):,} demand signals found")
+        return df_output, df_signals
     else:
-        failed_batches = []
         start_time = time.time()
 
         for batch_idx in range(n_batches):
-            if batch_idx < resume_from // batch_size:
-                continue
-
             start = batch_idx * batch_size
             end = min(start + batch_size, N)
             batch_df = df_work.iloc[start:end].reset_index(drop=True)
 
             processed = start + len(batch_df)
+            elapsed = time.time() - start_time
             if progress_callback:
-                elapsed = time.time() - start_time
                 eta = (elapsed / max(1, processed)) * (N - processed)
-                progress_callback(batch_idx, n_batches, processed, N, elapsed, eta)
+                progress_callback(batch_idx, n_batches, processed, N, elapsed, eta, results_count)
 
             user_prompt = build_user_prompt(batch_df)
             try:
@@ -333,37 +383,36 @@ def run_demand_signal_detection(
                     model_provider=model_provider,
                     model_name=model_name,
                 )
-            except QuotaExceededError:
-                checkpoint.save(existing_results)
-                print(f"[QUOTA EXCEEDED] Saved {len(existing_results)} results at batch {batch_idx+1}/{n_batches}. Stopping.")
-                break
+            except QuotaExceededError as exc:
+                exc.partial_results = list(existing_results)
+                _save_partial_and_raise(exc, model_provider, n_to_analyze=n_to_analyze, input_df=input_df)
 
-            if parsed is not None:
-                existing_results.extend(parsed)
-            else:
-                failed_batches.append(batch_idx)
-                for _, row in batch_df.iterrows():
-                    existing_results.append({
-                        "comment_id": str(row["comment_id"]),
-                        "signal": "error",
-                        "confidence": 0.0,
-                        "reason": "API call failed after retries",
-                    })
+            except LLMCallError as exc:
+                exc.partial_results = list(existing_results)
+                _save_partial_and_raise(exc, model_provider, n_to_analyze=n_to_analyze, input_df=input_df)
+
+            except Exception as exc:
+                # Catch-all for any unexpected error (network, timeout, schema change, etc.)
                 checkpoint.save(existing_results)
+                raise LLMCallError(
+                    model_provider,
+                    f"Unexpected error ({type(exc).__name__}): {exc}",
+                    batch_idx=batch_idx,
+                    partial_results=list(existing_results),
+                )
+
+            existing_results.extend(parsed)
+            results_count = len(existing_results)
+            print(f"[LLM] Batch {batch_idx+1}/{n_batches} done | {results_count}/{N} classified | {elapsed:.0f}s elapsed")
 
             time.sleep(rate_limit_delay)
 
         checkpoint.save(existing_results)
         checkpoint.clear()
-        results_df = pd.DataFrame(existing_results)
 
-        if failed_batches:
-            raise APIError(
-                provider=model_provider,
-                batch_errors=[{"batch": b} for b in failed_batches],
-            )
-
-    # Merge back with full input
+    # Merge back with full input (common path for both empty and non-empty branches)
+    if results_df.empty:
+        results_df = pd.DataFrame(columns=["comment_id", "signal", "confidence", "reason"])
     results_df["comment_id"] = results_df["comment_id"].astype(str)
     df_output = input_df.copy()
     df_output["comment_id"] = df_output["comment_id"].astype(str)
@@ -398,6 +447,9 @@ def run_demand_signal_detection(
     df_output.to_csv(OUTPUT_DIR / f"demand_signals_full_{provider_tag}_{timestamp}.csv", index=False)
     df_signals.to_parquet(OUTPUT_DIR / f"demand_signals_only_{provider_tag}_{timestamp}.parquet", index=False)
     df_signals.to_csv(OUTPUT_DIR / f"demand_signals_only_{provider_tag}_{timestamp}.csv", index=False)
+
+    print(f"[LLM] Done. Classified {len(df_output):,} comments → {len(df_signals):,} demand signals found")
+    print(f"[LLM] Signal breakdown: {df_signals['signal'].value_counts().to_dict()}")
 
     return df_output, df_signals
 

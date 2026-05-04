@@ -32,7 +32,17 @@ def merge_staging_to_master(
     comment_files = sorted(staging_dir.glob("*_comments_*.parquet"))
     run_files = sorted(staging_dir.glob("*_runs_*.parquet"))
 
-    def _load_and_concat(paths):
+    # Exclude any pre-existing master files from the staging glob so they are not
+    # re-ingested (important when output_dir == staging_dir).
+    def _staging_only(paths, master_names):
+        return [p for p in paths if p.name not in master_names]
+
+    master_names = {"videos_master.parquet", "comments_master.parquet", "runs_master.parquet"}
+    video_files = _staging_only(video_files, master_names)
+    comment_files = _staging_only(comment_files, master_names)
+    run_files = _staging_only(run_files, master_names)
+
+    def _load_and_concat(paths, id_col: str):
         dfs = []
         for p in paths:
             try:
@@ -44,14 +54,13 @@ def merge_staging_to_master(
             return pd.DataFrame()
         combined = pd.concat(dfs, ignore_index=True)
         # deduplicate by primary key
-        id_col = "video_id" if "video_id" in combined.columns else "comment_id"
         if id_col in combined.columns:
             combined = combined.drop_duplicates(subset=[id_col], keep="last")
         return combined.reset_index(drop=True)
 
-    videos_master = _load_and_concat(video_files)
-    comments_master = _load_and_concat(comment_files)
-    runs_master = _load_and_concat(run_files)
+    videos_master = _load_and_concat(video_files, id_col="video_id")
+    comments_master = _load_and_concat(comment_files, id_col="comment_id")
+    runs_master = _load_and_concat(run_files, id_col="run_id")
 
     videos_master.to_parquet(output_dir / "videos_master.parquet", index=False)
     comments_master.to_parquet(output_dir / "comments_master.parquet", index=False)
@@ -61,7 +70,7 @@ def merge_staging_to_master(
 
 
 def load_latest_master(output_dir: Path | None = None) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Load the most recent master parquet files."""
+    """Load master parquet files if they exist; otherwise fall back to the latest staging files."""
     if output_dir is None:
         output_dir = BASE_DIR / "data" / "collection_output"
     output_dir = Path(output_dir)
@@ -69,7 +78,30 @@ def load_latest_master(output_dir: Path | None = None) -> tuple[pd.DataFrame, pd
     vpath = output_dir / "videos_master.parquet"
     cpath = output_dir / "comments_master.parquet"
 
-    videos = pd.read_parquet(vpath) if vpath.exists() else pd.DataFrame()
-    comments = pd.read_parquet(cpath) if cpath.exists() else pd.DataFrame()
+    if vpath.exists() and cpath.exists():
+        return pd.read_parquet(vpath), pd.read_parquet(cpath)
 
-    return videos, comments
+    # No master files yet — collect from the latest staging files
+    video_files = sorted(output_dir.glob("*_videos_*.parquet"))
+    comment_files = sorted(output_dir.glob("*_comments_*.parquet"))
+
+    if not video_files and not comment_files:
+        return pd.DataFrame(), pd.DataFrame()
+
+    def _load_and_concat(paths, id_col: str):
+        if not paths:
+            return pd.DataFrame()
+        dfs = []
+        for p in paths:
+            try:
+                dfs.append(pd.read_parquet(p))
+            except Exception as e:
+                print(f"[WARN] Could not read {p}: {e}")
+        if not dfs:
+            return pd.DataFrame()
+        combined = pd.concat(dfs, ignore_index=True)
+        if id_col in combined.columns:
+            combined = combined.drop_duplicates(subset=[id_col], keep="last")
+        return combined.reset_index(drop=True)
+
+    return _load_and_concat(video_files, id_col="video_id"), _load_and_concat(comment_files, id_col="comment_id")

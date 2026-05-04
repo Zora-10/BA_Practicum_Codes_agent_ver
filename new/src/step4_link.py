@@ -133,7 +133,14 @@ def load_linked_data() -> pd.DataFrame:
     path = LINKED_DIR / "comments_video_linked.parquet"
     if not path.exists():
         return pd.DataFrame()
-    return pd.read_parquet(path)
+    df = pd.read_parquet(path)
+    # Guard against stale parquet files missing columns required by downstream steps
+    required_cols = {"product_categories", "video_context", "engagement_rate"}
+    missing = required_cols - set(df.columns)
+    if missing:
+        print(f"[WARN] Linked data is missing columns {missing} — treating as empty.")
+        return pd.DataFrame()
+    return df
 
 
 def load_video_summary() -> pd.DataFrame:

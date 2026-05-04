@@ -21,6 +21,31 @@ class QuotaExceededException(Exception):
     pass
 
 
+def load_latest_collected(
+    collection_dir: Path | None = None,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Load the most recent collected parquet files from disk."""
+    if collection_dir is None:
+        collection_dir = BASE_DIR / "data" / "collection_output"
+
+    video_files = sorted(collection_dir.glob("videos_*.parquet"))
+    comment_files = sorted(collection_dir.glob("comments_*.parquet"))
+    run_files = sorted(collection_dir.glob("runs_*.parquet"))
+
+    if not video_files:
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+
+    videos_list = [pd.read_parquet(f) for f in video_files]
+    comments_list = [pd.read_parquet(f) for f in comment_files]
+    runs_list = [pd.read_parquet(f) for f in run_files] if run_files else [pd.DataFrame()]
+
+    videos = pd.concat(videos_list, ignore_index=True).drop_duplicates(subset=["video_id"], keep="last")
+    comments = pd.concat(comments_list, ignore_index=True).drop_duplicates(subset=["comment_id"], keep="last")
+    runs = pd.concat(runs_list, ignore_index=True)
+
+    return videos, comments, runs
+
+
 # ── Utilities ─────────────────────────────────────────────────────────────────
 
 def utc_now() -> datetime:

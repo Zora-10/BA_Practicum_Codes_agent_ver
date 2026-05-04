@@ -98,6 +98,14 @@ def clean_linked_data(
     Full cleaning pipeline applied to linked DataFrame.
     Returns the cleaned DataFrame.
     """
+    required_cols = {"video_id", "engagement_rate", "title", "product_categories", "text_original"}
+    missing = required_cols - set(linked_df.columns)
+    if missing:
+        raise ValueError(
+            f"linked_df is missing required columns: {missing}. "
+            "Run Steps 2–4 to produce a properly linked DataFrame first."
+        )
+
     if output_dir is None:
         output_dir = CLEANED_DIR
     output_dir.mkdir(parents=True, exist_ok=True)

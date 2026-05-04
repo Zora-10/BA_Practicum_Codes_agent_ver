@@ -37,11 +37,11 @@ if str(SRC_DIR) not in sys.path:
 
 from src.config import BASE_DIR
 from src.step1_keywords import get_all_queries_flat, generate_all, generate_member_queries, generate_leader_queries
-from src.step2_collect import run_collection, QuotaExceededException
+from src.step2_collect import run_collection, load_latest_collected, QuotaExceededException
 from src.step3_merge import merge_staging_to_master, load_latest_master
 from src.step4_link import link_comments_to_videos, load_linked_data, load_video_summary
 from src.step5_clean import clean_linked_data, load_cleaned_data
-from src.step6_demand_signal import run_demand_signal_detection, load_latest_demand_signals, QuotaExceededError, APIError
+from src.step6_demand_signal import run_demand_signal_detection, load_latest_demand_signals, QuotaExceededError, APIError, LLMCallError
 
 # ── Session state defaults ─────────────────────────────────────────────────────
 defaults = {
@@ -66,6 +66,9 @@ defaults = {
     "step2_quota_exceeded": False,
     "collection_started": False,
     "llm_started": False,
+    "llm_error": None,
+    "llm_error_kind": "error",
+    "_flash": None,
 }
 
 for key, val in defaults.items():
@@ -165,6 +168,26 @@ def section_divider():
     st.markdown("<hr style='border-color:#dee2e6; margin: 1rem 0;'>", unsafe_allow_html=True)
 
 
+def flash(msg: str, kind: str = "success"):
+    """Store a one-time flash message in session state (shown on next page load)."""
+    st.session_state._flash = (kind, msg)
+
+
+def show_flash():
+    """Display and clear any pending flash message."""
+    if st.session_state._flash:
+        kind, msg = st.session_state._flash
+        st.session_state._flash = None
+        if kind == "success":
+            st.success(msg)
+        elif kind == "warning":
+            st.warning(msg)
+        elif kind == "error":
+            st.error(msg)
+        else:
+            st.info(msg)
+
+
 def page_nav():
     """Render sidebar navigation and return selected page."""
     PAGES = [
@@ -243,10 +266,9 @@ def render_overview():
 
     st.markdown("### Getting Started")
     st.info(
-        "1. **Enter your API keys** in the sidebar (YouTube + DeepSeek)\n"
-        "2. Navigate through each **Step** using the sidebar\n"
-        "3. Each step processes the output from the previous step\n"
-        "4. View final results in the **Results Dashboard**"
+        "1. Navigate through each **Step** using the sidebar\n"
+        "2. Each step processes the output from the previous step\n"
+        "3. View final results in the **Results Dashboard**"
     )
 
 
@@ -291,7 +313,7 @@ def render_step1_keywords():
 
     with tab1:
         all_df = pd.DataFrame({"query": keywords})
-        st.dataframe(all_df, use_container_width=True, height=400)
+        st.dataframe(all_df, width='stretch', height=400)
         download_button("⬇ Download All Keywords", all_df, "all_keywords", "s1_all")
 
     with tab2:
@@ -312,11 +334,11 @@ def render_step1_keywords():
             color_continuous_scale="Blues",
         )
         fig.update_layout(template="plotly_white", height=400, xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
         cat_sel = st.selectbox("Select category to view queries:", cat_counts.index.tolist())
         subset = combined[combined["category"] == cat_sel][["query", "type"]]
-        st.dataframe(subset, use_container_width=True, height=300)
+        st.dataframe(subset, width='stretch', height=300)
         download_button(f"⬇ Download {cat_sel} Keywords", subset, f"keywords_{cat_sel}", "s1_cat")
 
     with tab3:
@@ -332,7 +354,7 @@ def render_step1_keywords():
             color_discrete_sequence=px.colors.qualitative.Set2,
         )
         fig2.update_layout(template="plotly_white", height=400)
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width='stretch')
 
         for qtype, count in type_counts.items():
             st.caption(f"**{qtype}**: {count:,} keywords")
@@ -450,6 +472,14 @@ def render_step2_collection():
     comments = st.session_state.step2_comments
     runs = st.session_state.step2_runs
 
+    # Always try disk if session state is empty
+    if videos.empty:
+        videos_disk, comments_disk, runs_disk = load_latest_collected(BASE_DIR / "data" / "collection_output")
+        if not videos_disk.empty:
+            videos = videos_disk
+            comments = comments_disk
+            runs = runs_disk
+
     if not videos.empty:
         videos["video_url"] = "https://www.youtube.com/watch?v=" + videos["video_id"].astype(str)
         c1, c2, c3, c4 = st.columns(4)
@@ -462,16 +492,16 @@ def render_step2_collection():
         with tab_v:
             show_cols = ["video_id", "title", "video_url", "channel_title", "view_count", "like_count", "comment_count", "video_published_at"]
             show = videos[[c for c in show_cols if c in videos.columns]].head(50)
-            st.dataframe(show, use_container_width=True, height=400)
+            st.dataframe(show, width='stretch', height=400)
             download_button("⬇ Download Videos", videos, "collected_videos", "s2_vid")
         with tab_c:
             show_cols = ["comment_id", "video_id", "author_display_name", "text_original", "like_count", "published_at"]
             show = comments[[c for c in show_cols if c in comments.columns]].head(50)
-            st.dataframe(show, use_container_width=True, height=400)
+            st.dataframe(show, width='stretch', height=400)
             download_button("⬇ Download Comments", comments, "collected_comments", "s2_cmt")
         with tab_r:
             if not runs.empty:
-                st.dataframe(runs, use_container_width=True, height=400)
+                st.dataframe(runs, width='stretch', height=400)
     else:
         st.info("No collection data yet. Enter your YouTube API key and click **Start Collection**.")
 
@@ -484,78 +514,72 @@ def render_step3_merge():
     st.markdown("## 🔗 Step 3: Data Merge")
     st.markdown(
         "Merge all collected staging parquet files into unified **master tables** "
-        "(videos + comments). Deduplication is applied automatically."
+        "(videos + comments). Deduplication is applied automatically.\n\n"
     )
-
-    st.markdown("### 📂 Select Data Source")
-    col_src1, col_src2 = st.columns(2)
-    with col_src1:
-        use_session = st.checkbox("Use current session data (from Step 2)", value=True)
-    with col_src2:
-        st.caption("Enable 'Load from disk' to pick up files saved by the original notebook team pipeline.")
 
     collection_dir = BASE_DIR / "data" / "collection_output"
     safe_mkdir(collection_dir)
 
-    # If already merged in this session, use cached results
-    if st.session_state.step3_done:
-        videos = st.session_state.step3_videos
-        comments = st.session_state.step3_comments
-    else:
-        videos = pd.DataFrame()
-        comments = pd.DataFrame()
-        if use_session:
-            videos = st.session_state.step2_videos
-            comments = st.session_state.step2_comments
-        else:
-            videos, comments = load_latest_master(collection_dir)
+    # Always try to load master data from disk first
+    master_videos, master_comments = load_latest_master(collection_dir)
+    display_videos = master_videos
+    display_comments = master_comments
 
-    # Merge button
-    if st.button("🔄 Run Merge", type="primary"):
-        if videos.empty and comments.empty:
-            st.warning("No data to merge. Collect data in Step 2 first.")
-        else:
-            with st.spinner("Merging and deduplicating..."):
-                # Deduplicate
-                if not videos.empty:
-                    videos = videos.drop_duplicates(subset=["video_id"], keep="last")
-                if not comments.empty:
-                    comments = comments.drop_duplicates(subset=["comment_id"], keep="last")
+    # "Re-run" path: use session-state data (from Step 2) as input if available
+    session_videos = st.session_state.step3_videos if not st.session_state.step3_videos.empty else pd.DataFrame()
+    session_comments = st.session_state.step3_comments if not st.session_state.step3_comments.empty else pd.DataFrame()
 
-                # Save
-                videos.to_parquet(collection_dir / "videos_master.parquet", index=False)
-                comments.to_parquet(collection_dir / "comments_master.parquet", index=False)
+    has_disk_data = not display_videos.empty
 
-                st.session_state.step3_videos = videos
-                st.session_state.step3_comments = comments
-                st.session_state.step3_done = True
-
-            st.success("✅ Merge complete! Master tables saved.")
+    # ── Run / Re-run button ─────────────────────────────────────────────────────
+    btn_label = "🔄 Re-run Merge" if has_disk_data else "🚀 Run Merge"
+    if st.button(btn_label, type="primary"):
+        # ── FIX: always scan ALL staging files (from every team member run) ──
+        # `merge_staging_to_master` globs `*_videos_*.parquet` / `*_comments_*.parquet`
+        # inside collection_dir and concatenates + dedupes them into master tables.
+        with st.spinner("Scanning staging files from all members..."):
+            run_videos, run_comments, _ = merge_staging_to_master(
+                staging_dir=collection_dir,
+                output_dir=collection_dir,
+            )
+        with st.spinner("Merging and deduplicating..."):
+            if not run_videos.empty:
+                run_videos = run_videos.drop_duplicates(subset=["video_id"], keep="last")
+            if not run_comments.empty:
+                run_comments = run_comments.drop_duplicates(subset=["comment_id"], keep="last")
+            run_videos.to_parquet(collection_dir / "videos_master.parquet", index=False)
+            run_comments.to_parquet(collection_dir / "comments_master.parquet", index=False)
+            st.session_state.step3_videos = run_videos
+            st.session_state.step3_comments = run_comments
+            st.session_state.step3_done = True
+        flash(f"✅ Merge complete! {len(run_videos):,} videos, {len(run_comments):,} comments saved.", "success")
+        st.rerun()
 
     section_divider()
 
+    # ── Results preview ──────────────────────────────────────────────────────────
     st.markdown("### 📋 Merged Master Data")
 
-    videos = st.session_state.step3_videos if not st.session_state.step3_videos.empty else videos
-    comments = st.session_state.step3_comments if not st.session_state.step3_comments.empty else comments
-
-    if not videos.empty:
-        videos["video_url"] = "https://www.youtube.com/watch?v=" + videos["video_id"].astype(str)
+    if has_disk_data:
+        display_videos["video_url"] = "https://www.youtube.com/watch?v=" + display_videos["video_id"].astype(str)
         c1, c2, c3 = st.columns(3)
-        with c1: metric_card("Master Videos", len(videos))
-        with c2: metric_card("Master Comments", len(comments))
-        with c3: metric_card("Channels", videos["channel_title"].nunique())
+        with c1: metric_card("Master Videos", len(display_videos))
+        with c2: metric_card("Master Comments", len(display_comments))
+        with c3: metric_card("Channels", display_videos["channel_title"].nunique())
 
         t1, t2 = st.tabs(["🎬 Videos", "💬 Comments"])
         with t1:
             cols = ["video_id", "title", "video_url", "channel_title", "view_count", "like_count", "comment_count"]
-            st.dataframe(videos[[c for c in cols if c in videos.columns]].head(20), use_container_width=True, height=400)
-            download_button("⬇ Download Master Videos", videos, "videos_master", "s3_vid")
+            st.dataframe(display_videos[[c for c in cols if c in display_videos.columns]].head(20), width='stretch', height=400)
+            download_button("⬇ Download Master Videos", display_videos, "videos_master", "s3_vid")
         with t2:
-            st.dataframe(comments.head(20), use_container_width=True, height=400)
-            download_button("⬇ Download Master Comments", comments, "comments_master", "s3_cmt")
+            st.dataframe(display_comments.head(20), width='stretch', height=400)
+            download_button("⬇ Download Master Comments", display_comments, "comments_master", "s3_cmt")
     else:
-        st.info("No master data yet. Collect data in Step 2, then click **Run Merge**.")
+        st.info(
+            "No master data found on disk. "
+            "Collect data in **Step 2**, then click **Run Merge** above."
+        )
 
 
 # ════════════════════════════════════════════════════════════════════════════════
@@ -566,46 +590,59 @@ def render_step4_link():
     st.markdown("## 📊 Step 4: Comment-Video Linking")
     st.markdown(
         "Attach YouTube video metadata (title, description, channel, stats) to every comment. "
-        "Automatically classifies **product categories** and extracts **video context tags**."
+        "Automatically classifies **product categories** and extracts **video context tags**.\n\n"
     )
 
-    st.markdown("### Data Input")
-    collection_dir = BASE_DIR / "data" / "collection_output"
     linked_dir = BASE_DIR / "data" / "linked_data"
+    collection_dir = BASE_DIR / "data" / "collection_output"
     safe_mkdir(linked_dir)
 
-    # Load from session first (survives navigation)
-    linked = st.session_state.step4_linked
-    if linked.empty:
-        linked = load_linked_data()
+    # Always try to load linked data from disk first
+    linked = load_linked_data()
+    has_disk_data = not linked.empty
 
-    if linked.empty:
-        videos_src = st.session_state.step3_videos
-        comments_src = st.session_state.step3_comments
+    # "Re-run" path: source data from session state or load from disk
+    session_videos = st.session_state.step3_videos if not st.session_state.step3_videos.empty else pd.DataFrame()
+    session_comments = st.session_state.step3_comments if not st.session_state.step3_comments.empty else pd.DataFrame()
 
-        if videos_src.empty or comments_src.empty:
-            videos_src, comments_src = load_latest_master(BASE_DIR / "data" / "collection_output")
+    if not has_disk_data:
+        # No disk data — check if we have any source to link from
+        src_videos = session_videos if not session_videos.empty else pd.DataFrame()
+        src_comments = session_comments if not session_comments.empty else pd.DataFrame()
+        if src_videos.empty or src_comments.empty:
+            src_videos, src_comments = load_latest_master(collection_dir)
+        if not src_videos.empty:
+            st.caption(f"Source ready: {len(src_videos):,} videos | {len(src_comments):,} comments")
 
-        if videos_src.empty or comments_src.empty:
-            st.warning("No merged data found. Complete Steps 2 & 3 first.")
-            return
+    # ── Run / Re-run button ─────────────────────────────────────────────────────
+    btn_label = "🔄 Re-link Comments" if has_disk_data else "🔗 Link Comments to Videos"
+    if st.button(btn_label, type="primary"):
+        # Initialize from session state, fall back to disk
+        src_videos = session_videos if not session_videos.empty else pd.DataFrame()
+        src_comments = session_comments if not session_comments.empty else pd.DataFrame()
+        if src_videos.empty or src_comments.empty:
+            src_videos, src_comments = load_latest_master(collection_dir)
 
-        st.caption(f"Videos: {len(videos_src):,} | Comments: {len(comments_src):,}")
-
-        if st.button("🔗 Link Comments to Videos", type="primary"):
+        if src_videos.empty or src_comments.empty:
+            flash("No source data found. Collect data in Steps 2–3 first.", "warning")
+        else:
             with st.spinner("Linking comments with video metadata..."):
                 linked_df = link_comments_to_videos(
-                    comments=comments_src,
-                    videos=videos_src,
+                    comments=src_comments,
+                    videos=src_videos,
                     output_dir=linked_dir,
                 )
                 st.session_state.step4_linked = linked_df
                 st.session_state.step4_done = True
-            st.success(f"✅ Linked {len(linked_df):,} comments!")
-    else:
-        st.caption(f"Using cached results: {len(linked):,} linked comments (navigate away and back to reload from disk if needed).")
+            flash(f"✅ Linked {len(linked_df):,} comments!", "success")
+            st.rerun()
 
+    section_divider()
+
+    # ── Results preview ──────────────────────────────────────────────────────────
     if not linked.empty:
+        st.caption(f"Showing {len(linked):,} linked comments from disk.")
+
         c1, c2, c3, c4 = st.columns(4)
         with c1: metric_card("Linked Comments", len(linked))
         with c2: metric_card("Unique Videos", linked["video_id"].nunique())
@@ -628,7 +665,7 @@ def render_step4_link():
                 color_continuous_scale="Viridis",
             )
             fig.update_layout(template="plotly_white", height=400, xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         # Video context
         st.markdown("#### Video Context Distribution")
@@ -643,7 +680,7 @@ def render_step4_link():
                 color_discrete_sequence=px.colors.qualitative.Pastel,
             )
             fig2.update_layout(template="plotly_white", height=400)
-            st.plotly_chart(fig2, use_container_width=True)
+            st.plotly_chart(fig2, width='stretch')
 
         section_divider()
 
@@ -651,7 +688,7 @@ def render_step4_link():
         cols = ["comment_id", "video_id", "title", "video_url", "channel_title",
                 "view_count", "video_like_count", "video_comment_count",
                 "product_categories", "video_context", "engagement_rate"]
-        st.dataframe(linked[[c for c in cols if c in linked.columns]].head(20), use_container_width=True, height=400)
+        st.dataframe(linked[[c for c in cols if c in linked.columns]].head(20), width='stretch', height=400)
         download_button("⬇ Download Linked Data", linked, "comments_video_linked", "s4_link")
 
         # Video summary
@@ -660,11 +697,14 @@ def render_step4_link():
         if not video_summary.empty:
             st.dataframe(
                 video_summary[["title", "channel_title", "comment_count", "view_count", "engagement_rate"]].head(20),
-                use_container_width=True,
+                width='stretch',
                 height=400,
             )
     else:
-        st.info("Click **Link Comments to Videos** to start.")
+        st.info(
+            "No linked data found on disk. "
+            "Collect data in **Steps 2–3**, then click **Link Comments to Videos** above."
+        )
 
 
 # ════════════════════════════════════════════════════════════════════════════════
@@ -678,52 +718,50 @@ def render_step5_clean():
         "- Remove low-engagement videos, excluded categories (phone cases, fashion, etc.)\n"
         "- Deduplicate & clean text (URLs, non-ASCII, special characters)\n"
         "- Filter low-value comments (single words, spam patterns)\n"
-        "- Rule-based demand signal pre-detection & priority assignment"
+        "- Rule-based demand signal pre-detection & priority assignment\n\n"
     )
 
     linked_dir = BASE_DIR / "data" / "linked_data"
     cleaned_dir = BASE_DIR / "data" / "cleaned_data"
     safe_mkdir(cleaned_dir)
 
-    # Read from session state first (survives navigation)
-    cleaned = st.session_state.step5_cleaned
-    summary = st.session_state.step5_summary
+    # Always try to load cleaned data from disk first
+    cleaned = load_cleaned_data()
+    has_disk_data = not cleaned.empty
 
-    if cleaned.empty:
-        cleaned = load_cleaned_data()
+    # Source linked data for display when we have disk data
+    linked = st.session_state.step4_linked if not st.session_state.step4_linked.empty else load_linked_data()
 
-    if cleaned.empty:
-        linked = st.session_state.step4_linked
+    # ── Run / Re-run button ─────────────────────────────────────────────────────
+    if not has_disk_data and linked.empty:
+        master_videos, master_comments = load_latest_master(BASE_DIR / "data" / "collection_output")
+        if not master_videos.empty:
+            st.caption(f"Source ready: {len(master_comments):,} comments from master data.")
+
+    btn_label = "🔄 Re-run Cleaning" if has_disk_data else "🧹 Run Cleaning"
+    if st.button(btn_label, type="primary"):
         if linked.empty:
-            linked = load_linked_data()
-        if linked.empty:
-            st.warning("No linked data found. Complete Steps 2–4 first.")
-            return
-        st.caption(f"Input: {len(linked):,} linked comments")
-    else:
-        st.caption(f"Using cached cleaned data: {len(cleaned):,} comments (navigate away and back to reload from disk if needed).")
+            flash("No linked data found. Complete Steps 2–4 first.", "warning")
+        else:
+            with st.spinner("Cleaning and filtering..."):
+                try:
+                    cleaned_df, summary = clean_linked_data(linked_df=linked, output_dir=cleaned_dir)
+                except ValueError as e:
+                    flash(str(e), "warning")
+                    cleaned_df, summary = pd.DataFrame(), {}
+                else:
+                    st.session_state.step5_cleaned = cleaned_df
+                    st.session_state.step5_summary = summary
+                    st.session_state.step5_done = True
+                    flash(f"✅ Cleaned: {len(cleaned_df):,} / {len(linked):,} comments retained ({100*len(cleaned_df)/max(1,len(linked)):.1f}%)", "success")
+            st.rerun()
 
-    # Config
-    with st.expander("⚙️ Cleaning Parameters", expanded=False):
-        col1, col2 = st.columns(2)
-        with col1:
-            st.checkbox("Remove phone/tablet case videos", value=True, disabled=True)
-            st.checkbox("Remove fashion/aesthetic case videos", value=True, disabled=True)
-            st.checkbox("Remove irrelevant categories", value=True, disabled=True)
-        with col2:
-            min_comments = st.number_input("Min comments per video", min_value=1, max_value=50, value=5)
-            min_engagement = st.number_input("Min engagement rate", min_value=0.1, max_value=10.0, value=1.0)
-        st.caption("Parameters are fixed to match original notebook logic.")
+    section_divider()
 
-    if st.button("🧹 Run Cleaning", type="primary"):
-        with st.spinner("Cleaning and filtering..."):
-            cleaned_df, summary = clean_linked_data(linked_df=linked, output_dir=cleaned_dir)
-            st.session_state.step5_cleaned = cleaned_df
-            st.session_state.step5_summary = summary
-            st.session_state.step5_done = True
-        st.success(f"✅ Cleaned: {len(cleaned_df):,} / {len(linked):,} comments retained ({100*len(cleaned_df)/len(linked):.1f}%)")
-
+    # ── Results preview ──────────────────────────────────────────────────────────
     if not cleaned.empty:
+        st.caption(f"Showing {len(cleaned):,} cleaned comments from disk.")
+
         c1, c2, c3, c4 = st.columns(4)
         with c1: metric_card("Retained Comments", len(cleaned))
         with c2: metric_card("Unique Videos", cleaned["video_id"].nunique())
@@ -744,7 +782,7 @@ def render_step5_clean():
                 color_discrete_map={"high": "#f85149", "medium": "#f0c000", "general": "#8b949e"},
             )
             fig.update_layout(template="plotly_white", height=350)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         # Rule-based demand signal pre-detection
         st.markdown("#### Rule-Based Demand Signal Pre-Detection")
@@ -762,14 +800,17 @@ def render_step5_clean():
                 color_continuous_scale="Mint",
             )
             fig2.update_layout(template="plotly_white", height=400, xaxis_tickangle=-30)
-            st.plotly_chart(fig2, use_container_width=True)
+            st.plotly_chart(fig2, width='stretch')
 
         section_divider()
         st.markdown("#### Sample Cleaned Data")
-        st.dataframe(cleaned.head(20), use_container_width=True, height=400)
+        st.dataframe(cleaned.head(20), width='stretch', height=400)
         download_button("⬇ Download Cleaned Data", cleaned, "cleaned_comments_linked", "s5_clean")
     else:
-        st.info("Click **Run Cleaning** to filter the linked data.")
+        st.info(
+            "No cleaned data found on disk. "
+            "Collect data in **Steps 2–4**, then click **Run Cleaning** above."
+        )
 
 
 # ════════════════════════════════════════════════════════════════════════════════
@@ -782,8 +823,17 @@ def render_step6_llm():
         "Classify each cleaned comment into demand signal types using AI.\n"
         "Supports **DeepSeek** and **Google Gemini** models.\n"
         "• `purchase_intent` · `problem_complaint` · `comparison_research` · "
-        "`usage_scenario` · `wishful_thinking` · `supply_recommendation`"
+        "`usage_scenario` · `wishful_thinking` · `supply_recommendation`\n\n"
     )
+
+    # Always try to load results from disk first — shown regardless of API key
+    full_df, signal_df = pd.DataFrame(), pd.DataFrame()
+    try:
+        full_df, signal_df = load_latest_demand_signals()
+    except Exception:
+        pass
+
+    has_disk_data = not signal_df.empty
 
     # Model selection
     st.markdown("### ⚙️ LLM Settings")
@@ -813,9 +863,6 @@ def render_step6_llm():
         default_model = "gemini-3-flash-preview"
 
     api_key = st.text_input(api_placeholder, type="password", help=api_help)
-    if not api_key:
-        st.warning(f"Enter your {model_provider.capitalize()} API key above to run classification.")
-        return
 
     col_a, col_b, col_c, col_d = st.columns(4)
     with col_a:
@@ -827,63 +874,60 @@ def render_step6_llm():
     with col_d:
         model_name = st.selectbox("Model", model_options, index=0)
 
-    # Read from session state first (survives navigation)
-    full_df = st.session_state.step6_full
-    signal_df = st.session_state.step6_signals
+    # Config summary
+    with st.expander("🔍 LLM Classification Labels", expanded=False):
+        st.markdown("""
+        | Label | Description |
+        |-------|-------------|
+        | **purchase_intent** | Explicit desire or plan to buy a protective case |
+        | **problem_complaint** | Frustration about damage or lack of protection |
+        | **comparison_research** | Comparing or researching different cases |
+        | **usage_scenario** | Describes a specific use context requiring protection |
+        | **wishful_thinking** | Wishes they had bought or owned protection |
+        | **supply_recommendation** | Recommends or praises a specific case product |
+        | **no_signal** | No demand signal for protective cases |
+        """)
 
-    if full_df.empty:
-        try:
-            full_df, signal_df = load_latest_demand_signals()
-        except Exception:
-            full_df, signal_df = pd.DataFrame(), pd.DataFrame()
+    # ── Run / Re-run button ─────────────────────────────────────────────────────
+    cleaned = st.session_state.step5_cleaned if not st.session_state.step5_cleaned.empty else load_cleaned_data()
+    total_comments = len(cleaned) if not cleaned.empty else 0
 
-    # If results already exist, show cached and skip input controls
-    if st.session_state.step6_done and not signal_df.empty:
-        st.success(f"✅ Cached results: {len(signal_df):,} demand signals from {len(full_df):,} classified comments.")
-        st.caption("To re-run, refresh the page first.")
+    if total_comments == 0:
+        n_to_analyze = 0
+        st.warning("No cleaned data found. Complete Step 5 first.")
     else:
-        cleaned = st.session_state.step5_cleaned
-        if cleaned.empty:
-            cleaned = load_cleaned_data()
-        if cleaned.empty:
-            st.warning("No cleaned data found. Complete Step 5 first.")
-            return
-
-        total_comments = len(cleaned)
         n_to_analyze = st.number_input(
             "Comments to analyze", 1, total_comments, total_comments,
             help=f"Enter how many of the {total_comments:,} cleaned comments to analyze."
         )
 
-        st.info(f"**{model_provider.upper()}** | Analyzing: {n_to_analyze:,} / {total_comments:,} | "
-                f"Est. API calls: ~{max(1, n_to_analyze // batch_size):,} | "
-                f"Delay: {rate_delay}s between calls")
+    btn_label = "🚀 Re-run LLM Classification" if has_disk_data else "🚀 Run LLM Classification"
 
-        # Config summary
-        with st.expander("🔍 LLM Classification Labels", expanded=False):
-            st.markdown("""
-            | Label | Description |
-            |-------|-------------|
-            | **purchase_intent** | Explicit desire or plan to buy a protective case |
-            | **problem_complaint** | Frustration about damage or lack of protection |
-            | **comparison_research** | Comparing or researching different cases |
-            | **usage_scenario** | Describes a specific use context requiring protection |
-            | **wishful_thinking** | Wishes they had bought or owned protection |
-            | **supply_recommendation** | Recommends or praises a specific case product |
-            | **no_signal** | No demand signal for protective cases |
-            """)
+    # Show error from a previous run (outside button block so it persists after rerun)
+    if st.session_state.llm_error:
+        st.error(st.session_state.llm_error)
+        st.session_state.llm_error = None
 
-        if st.button("🚀 Run LLM Classification", type="primary", disabled=st.session_state.llm_started):
+    if st.button(btn_label, type="primary", disabled=st.session_state.llm_started):
+        if total_comments == 0:
+            st.warning("No cleaned data available. Complete Step 5 first.")
+        else:
             st.session_state.llm_started = True
 
             progress_bar = st.progress(0)
             status_text = st.empty()
-            count_text = st.empty()
 
-            def progress_cb(batch_idx, n_batches, processed, total, elapsed=0, eta=0):
+            def progress_cb(batch_idx, n_batches, processed, total, elapsed=0, eta=0, results_count=0):
                 pct = int(100 * processed / total)
                 progress_bar.progress(pct)
-                status_text.text(f"Batch {batch_idx+1}/{n_batches} | {elapsed:.0f}s elapsed | ETA ~{eta:.0f}s")
+                speed = processed / max(elapsed, 0.1)
+                status_text.text(
+                    f"Batch {batch_idx+1}/{n_batches} | "
+                    f"{processed:,}/{total:,} comments ({pct}%) | "
+                    f"~{speed:.1f} comments/s | "
+                    f"ETA ~{eta:.0f}s | "
+                    f"{results_count:,} results"
+                )
 
             spinner_text = f"{model_provider.capitalize()} AI is classifying comments (this may take a while)..."
             try:
@@ -897,16 +941,48 @@ def render_step6_llm():
                         save_every=save_every,
                         rate_limit_delay=rate_delay,
                         progress_callback=progress_cb,
+                        n_to_analyze=n_to_analyze,
                     )
-            except APIError as e:
+            except (APIError, QuotaExceededError, LLMCallError) as e:
+                progress_bar.empty()
+                status_text.empty()
                 st.session_state.llm_started = False
-                batches = ", ".join(str(b["batch"] + 1) for b in e.batch_errors)
-                st.error(
-                    f"⚠️ **{e.provider} API call failed** (batch {batches}) — "
-                    f"Please check your API key or network connection."
-                )
+                if isinstance(e, QuotaExceededError):
+                    provider_name = e.provider
+                    partial = e.partial_results
+                    partial_count = len(partial) if partial else 0
+                    detail = e.message or f"{provider_name} quota exceeded"
+                    st.session_state.llm_error = (
+                        f"⚠️ **Quota exceeded** ({provider_name}) — {detail}\n\n"
+                        f"Progress saved: {partial_count:,} of {n_to_analyze:,} comments classified. "
+                        f"Resume later or switch to a different provider."
+                    )
+                    st.session_state.llm_error_kind = "error"
+                elif isinstance(e, LLMCallError):
+                    provider_name = e.provider
+                    reason = e.reason
+                    batch_info = f" batch {e.batch_idx+1}" if e.batch_idx is not None else ""
+                    partial = e.partial_results
+                    partial_count = len(partial) if partial else 0
+                    st.session_state.llm_error = (
+                        f"⚠️ **LLM Error** ({provider_name}{batch_info}) — {reason}\n\n"
+                        f"Progress saved: {partial_count:,} of {n_to_analyze:,} comments classified. "
+                        f"Check your API key, network, or model availability."
+                    )
+                    st.session_state.llm_error_kind = "error"
+                else:
+                    batches = ", ".join(str(b["batch"] + 1) for b in e.batch_errors)
+                    partial = e.partial_results
+                    partial_count = len(partial) if partial else 0
+                    st.session_state.llm_error = (
+                        f"⚠️ **{e.provider} API call failed** (batch {batches}) — "
+                        f"Please check your API key or network connection."
+                        + (f" Progress saved: {partial_count:,} comments classified." if partial_count else "")
+                    )
+                    st.session_state.llm_error_kind = "error"
                 full_df = pd.DataFrame()
                 signal_df = pd.DataFrame()
+                st.rerun()
             else:
                 total_input = len(cleaned)
                 total_done = len(full_df)
@@ -920,21 +996,20 @@ def render_step6_llm():
                 st.session_state.step6_done = True
                 st.success(f"✅ LLM classification complete! Found {len(signal_df):,} demand signals.")
 
-            # Always clean up progress UI elements
             progress_bar.empty()
             status_text.empty()
-            count_text.empty()
 
-    # Re-read from session state after potential run
-    full_df = st.session_state.step6_full
-    signal_df = st.session_state.step6_signals
+    section_divider()
 
-    # Results
+    # ── Results preview ──────────────────────────────────────────────────────────
     if not signal_df.empty:
+        if has_disk_data:
+            st.success(f"Showing {len(signal_df):,} demand signals from disk (saved from a previous run).")
+
         c1, c2, c3, c4 = st.columns(4)
         with c1: metric_card("Total Classified", len(full_df))
         with c2: metric_card("Demand Signals", len(signal_df),
-                              f"{100*len(signal_df)/len(full_df):.1f}%")
+                              f"{100*len(signal_df)/max(1,len(full_df)):.1f}%")
         with c3: metric_card("Unique Videos", signal_df["video_id"].nunique())
         with c4: metric_card("Avg Confidence", f"{signal_df['confidence'].mean():.2f}")
 
@@ -950,7 +1025,7 @@ def render_step6_llm():
             color_continuous_scale="Burg",
         )
         fig.update_layout(template="plotly_white", height=400, xaxis_tickangle=-30)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
         # Confidence distribution
         st.markdown("#### Confidence Score Distribution")
@@ -962,13 +1037,13 @@ def render_step6_llm():
             color_discrete_sequence=["#58a6ff"],
         )
         fig2.update_layout(template="plotly_white", height=350)
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width='stretch')
 
         section_divider()
         st.markdown("#### Top Demand Signals (Highest Confidence)")
         display_cols = ["signal", "confidence", "comment_text", "video_title", "video_url", "channel_title"]
         display = signal_df[[c for c in display_cols if c in signal_df.columns]].head(30)
-        st.dataframe(display, use_container_width=True, height=500)
+        st.dataframe(display, width='stretch', height=500)
 
         dl1, dl2 = st.columns(2)
         with dl1:
@@ -976,7 +1051,7 @@ def render_step6_llm():
         with dl2:
             download_button("⬇ Download Signals Only", signal_df, "demand_signals_only", "s6_sig")
     else:
-        st.info("Click **Run LLM Classification** to start DeepSeek demand signal detection.")
+        st.info("No demand signal results found on disk. Configure settings above and click **Run LLM Classification**.")
 
 
 # ════════════════════════════════════════════════════════════════════════════════
@@ -1024,7 +1099,7 @@ def render_dashboard():
             color_continuous_scale="RdPu",
         )
         fig_bar.update_layout(template="plotly_white", height=400, xaxis_tickangle=-30)
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.plotly_chart(fig_bar, width='stretch')
 
     with col_right:
         st.markdown("**Signal Type Legend**")
@@ -1043,7 +1118,7 @@ def render_dashboard():
         points="outliers",
     )
     fig_box.update_layout(template="plotly_white", height=400, xaxis_tickangle=-30, showlegend=False)
-    st.plotly_chart(fig_box, use_container_width=True)
+    st.plotly_chart(fig_box, width='stretch')
 
     # Product categories (from cleaned data)
     st.markdown("### Signals by Product Category")
@@ -1068,7 +1143,7 @@ def render_dashboard():
                 color_continuous_scale="Emrld",
             )
             fig_cat.update_layout(template="plotly_white", height=400, xaxis_tickangle=-45)
-            st.plotly_chart(fig_cat, use_container_width=True)
+            st.plotly_chart(fig_cat, width='stretch')
 
     # Timeline (if published_at available) — prefer full_df which has richer columns
     st.markdown("### Comment Timeline")
@@ -1089,7 +1164,7 @@ def render_dashboard():
                 labels={"date": "Date", "count": "Signal Count"},
             )
             fig_timeline.update_layout(template="plotly_white", height=400)
-            st.plotly_chart(fig_timeline, use_container_width=True)
+            st.plotly_chart(fig_timeline, width='stretch')
 
     # Top videos by signal count
     st.markdown("### Top Videos by Signal Count")
@@ -1102,7 +1177,7 @@ def render_dashboard():
     disp_cols = [c for c in ["video_title", "channel_title", "signal_count", "video_url"] if c in video_signals.columns]
     st.dataframe(
         video_signals[disp_cols],
-        use_container_width=True,
+        width='stretch',
         height=500,
     )
 
@@ -1115,7 +1190,7 @@ def render_dashboard():
         text_map = full_df[["comment_id", "clean_text"]].drop_duplicates("comment_id").set_index("comment_id")["clean_text"]
         table_df["comment_text"] = table_df["comment_id"].map(text_map)
     disp_cols = ["comment_text"] + [c for c in table_df.columns if c != "comment_text"]
-    st.dataframe(table_df[disp_cols], use_container_width=True, height=600)
+    st.dataframe(table_df[disp_cols], width='stretch', height=600)
 
     # Export
     st.markdown("### 📥 Export")
@@ -1134,6 +1209,7 @@ def render_dashboard():
 
 def main():
     selected_page = page_nav()
+    show_flash()
 
     if selected_page.startswith("🏠"):
         render_overview()

@@ -55,13 +55,29 @@ def link_comments_to_videos(
         output_dir = LINKED_DIR
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Select relevant video columns
+    # Validate input data
+    if videos.empty:
+        raise ValueError("Videos DataFrame is empty. Please check your collection data.")
+    if comments.empty:
+        raise ValueError("Comments DataFrame is empty. Please check your collection data.")
+    if "video_id" not in videos.columns:
+        raise ValueError(f"'video_id' not found in videos columns: {videos.columns.tolist()}")
+    if "video_id" not in comments.columns:
+        raise ValueError(f"'video_id' not found in comments columns: {comments.columns.tolist()}")
+    print(f"[LINK] Starting with {len(videos)} videos, {len(comments)} comments")
+
+    # Select relevant video columns (only those that exist)
     video_cols = [
         "video_id", "channel_title", "title", "description", "tags",
         "category_id", "default_language", "video_published_at",
         "view_count", "like_count", "comment_count",
     ]
-    videos_subset = videos[video_cols].drop_duplicates(subset=["video_id"])
+    # Only select columns that exist in the DataFrame
+    existing_cols = [c for c in video_cols if c in videos.columns]
+    if not existing_cols:
+        raise ValueError(f"No expected video columns found. Available columns: {videos.columns.tolist()}")
+    videos_subset = videos[existing_cols].drop_duplicates(subset=["video_id"])
+    print(f"[LINK] Using video columns: {existing_cols}")
 
     # Merge
     linked = comments.merge(
@@ -70,11 +86,14 @@ def link_comments_to_videos(
         how="left",
         suffixes=("_comment", "_video"),
     )
-    linked = linked.rename(columns={
-        "like_count_comment": "comment_like_count",
-        "like_count_video": "video_like_count",
-        "comment_count": "video_comment_count",
-    })
+    
+    # Safely rename columns if they exist
+    if "like_count_comment" in linked.columns:
+        linked = linked.rename(columns={"like_count_comment": "comment_like_count"})
+    if "like_count_video" in linked.columns:
+        linked = linked.rename(columns={"like_count_video": "video_like_count"})
+    if "comment_count" in linked.columns:
+        linked = linked.rename(columns={"comment_count": "video_comment_count"})
 
     # Product category classification
     linked["product_categories"] = linked.apply(classify_product_category, axis=1)

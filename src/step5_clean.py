@@ -18,6 +18,8 @@ from .config import (
     DEMAND_EXCLUDE_PATTERNS,
 )
 
+from datetime import datetime, timezone
+
 
 # ── Text cleaning ───────────────────────────────────────────────────────────────
 
@@ -90,13 +92,24 @@ MIN_COMMENTS_PER_VIDEO = 5
 MIN_ENGAGEMENT_RATE = 1.0
 
 
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc)
+
+
 def clean_linked_data(
     linked_df: pd.DataFrame,
     output_dir: Path | None = None,
-) -> pd.DataFrame:
+    days_back: int | None = None,
+) -> tuple[pd.DataFrame, dict]:
     """
     Full cleaning pipeline applied to linked DataFrame.
-    Returns the cleaned DataFrame.
+    Returns (cleaned DataFrame, summary dict).
+
+    Args:
+        linked_df:  Linked comment-video DataFrame.
+        output_dir: Where to save cleaned output.
+        days_back:  If set, only keep comments published within the last N days.
+                    None = keep all comments (no date filter).
     """
     required_cols = {"video_id", "engagement_rate", "title", "product_categories", "text_original"}
     missing = required_cols - set(linked_df.columns)
@@ -112,6 +125,15 @@ def clean_linked_data(
 
     df = linked_df.copy()
     original_len = len(df)
+
+    # ── Step 0: Date filter (before any other processing) ─────────────────────
+    if days_back is not None and days_back > 0 and "published_at" in df.columns:
+        cutoff = utc_now() - pd.Timedelta(days=days_back)
+        df["published_at"] = pd.to_datetime(df["published_at"], errors="coerce")
+        before_date = len(df)
+        df = df[df["published_at"] >= cutoff]
+        after_date = len(df)
+        print(f"[CLEAN] Date filter ({days_back}d): {before_date} → {after_date} comments")
 
     # ── Step 1: Video-level pre-filtering ────────────────────────────────────
 
@@ -183,6 +205,7 @@ def clean_linked_data(
         "original_rows": original_len,
         "cleaned_rows": len(df_clean),
         "unique_videos": df_clean["video_id"].nunique() if not df_clean.empty else 0,
+        "days_back": days_back,
         "priority_dist": df_clean["priority_level"].value_counts().to_dict()
         if "priority_level" in df_clean.columns
         else {},

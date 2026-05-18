@@ -117,3 +117,44 @@ def get_all_queries_flat() -> list[str]:
     all_q = generate_member_queries()["query"].tolist()
     leader_q = generate_leader_queries()["query"].tolist()
     return list(dict.fromkeys(all_q + leader_q))
+
+
+# ── Dynamic Keyword Generation ──────────────────────────────────────────────────
+
+def generate_keywords_from_components(
+    object_words: list[str],
+    type_words: list[str],
+    negative_words: list[str],
+    separator: str = " ",
+) -> list[str]:
+    """
+    Generate all combinations of (object_words × type_words), joined by `separator`.
+
+    If a type_word contains "{obj}" it will be treated as a template and formatted
+    with each object word. Otherwise it will be concatenated directly.
+
+    A query is dropped if any negative word appears in it (case-insensitive,
+    word-boundary matching for single-word terms, substring matching for multi-word).
+
+    Parameters
+    ----------
+    object_words : list of subjects / product types, e.g. ["camera", "laptop"]
+    type_words   : list of intent modifiers, e.g. ["protective case", "best {obj} case"]
+    negative_words : list of exclusion terms, e.g. ["iphone", "phone case"]
+    separator    : string used to join object + type (default single space)
+
+    Returns
+    -------
+    list[str]  : deduplicated, filtered query strings
+    """
+    rows = []
+    for obj in object_words:
+        for tw in type_words:
+            if "{obj}" in tw:
+                query = tw.format(obj=obj)
+            else:
+                query = f"{obj}{separator}{tw}" if tw else obj
+            rows.append(query)
+
+    df = pd.DataFrame({"query": rows})
+    return _filter_queries(df, negative_words)["query"].tolist()
